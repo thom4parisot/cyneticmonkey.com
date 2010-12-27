@@ -1,0 +1,7 @@
+AddCharset UTF-8 .html .js .css .txt .xml
+
+<FilesMatch .*>
+   Options MultiViews
+   AddLanguage en               .en
+   AddLanguage fr               .fr   
+</FilesMatch>
