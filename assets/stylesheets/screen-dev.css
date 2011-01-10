@@ -19,7 +19,11 @@ body{
 }
 
 a{
+	color: #00862a;
 	text-decoration: underline;
+}
+a:visited{
+	color: #006e23;
 }
 a:hover,
 a:focus{
@@ -34,6 +38,33 @@ h3{
 	text-shadow: 1px 1px #fff, -1px -1px #ddd;
 }
 
+h2{
+	background: #00862a;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	box-shadow: 0 0 4px #a970ff;
+	color: #fff;
+	margin-bottom: 0;
+	padding: 10px;
+	text-shadow: 1px 1px 1px #2f1f47;
+}
+
+/*
+ * OOCSS Extend
+ */
+
+/* extends .line */
+.line-service{
+	margin-bottom: 3em;
+}
+
+.link:before{
+	content: "▶";
+	font-size: .8em;
+	margin-right: .4em;
+}
+
 /*
  * Main Logo
  * 
@@ -46,3 +77,13 @@ h3{
 	#logo-placeholder img{
 		display: inline;
 	}
+	
+/*
+ * Contact Means
+ */
+#contact-means{
+	font-size: 1.3em;
+	font-weight: bold;
+	padding-top: 2em;
+	text-align: center;
+}
