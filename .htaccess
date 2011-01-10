@@ -2,7 +2,7 @@ AddCharset UTF-8 .html .js .css .txt .xml
 
 # Performances
 <IfModule mod_expires.c>
-ExpiresActive On
+ExpiresActive Off
 ExpiresDefault "access plus 1 week"
 ExpiresByType image/* "access plus 1 month"
 ExpiresByType text/css "access plus 1 week"
@@ -15,4 +15,15 @@ FileEtag MTime Size
 
 <IfModule mod_deflate.c>
 AddOutputFilterByType DEFLATE text/plain text/css text/javascript application/javascript application/x-javascript text/xml text/html
+</IfModule>
+
+# Feeds
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+#General Feed
+RewriteRule	^feeds/posts$		- [R=204,L]
+
+#Calendar Feed
+RewriteRule ^feeds/events$	https://www.google.com/calendar/feeds/cyneticmonkey.com_57i9ip5bcq9jq8crnqa6ruupko@group.calendar.google.com/public/basic?orderby=starttime&sortorder=a	[R=302,L]
 </IfModule>
