@@ -19,6 +19,7 @@ AddOutputFilterByType DEFLATE text/plain text/css text/javascript application/ja
 
 # Feeds
 <IfModule mod_rewrite.c>
+Options +FollowSymlinks
 RewriteEngine On
 
 #General Feed
