@@ -2,7 +2,7 @@ AddCharset UTF-8 .html .js .css .txt .xml
 
 # Performances
 <IfModule mod_expires.c>
-ExpiresActive Off
+ExpiresActive On
 ExpiresDefault "access plus 1 week"
 ExpiresByType image/* "access plus 1 month"
 ExpiresByType text/css "access plus 1 week"
