@@ -25,6 +25,7 @@ RewriteEngine On
 #General Feed
 RewriteRule	^feeds/posts$		- [R=204,L]
 
-#Calendar Feed
-RewriteRule ^feeds/events$	https://www.google.com/calendar/feeds/cyneticmonkey.com_57i9ip5bcq9jq8crnqa6ruupko@group.calendar.google.com/public/basic?orderby=starttime&sortorder=a	[R=302,L]
+#Calendar
+RewriteRule ^events$			https://www.google.com/calendar/embed?src=cyneticmonkey.com_57i9ip5bcq9jq8crnqa6ruupko@group.calendar.google.com [R=302,L]
+RewriteRule ^events/feed$	https://www.google.com/calendar/feeds/cyneticmonkey.com_57i9ip5bcq9jq8crnqa6ruupko@group.calendar.google.com/public/basic?orderby=starttime&sortorder=a	[R=302,L]
 </IfModule>
