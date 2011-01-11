@@ -71,11 +71,13 @@ h2{
  * Respects the spacing policy written by the webdesigner
  */
 #logo-placeholder{
-	margin: 82px;
+	margin: 67px;		/* 200px / 3 */
 	text-align: center;
 }
 	#logo-placeholder img{
+		height: 274px;
 		display: inline;
+	width: 400px;
 	}
 	
 /*
