@@ -10,13 +10,13 @@ Header always append X-Frame-Options DENY
 # sudo a2enmod expires
 <IfModule mod_expires.c>
 ExpiresActive On
-ExpiresDefault "access plus 1 week"
-ExpiresByType image/* "access plus 1 month"
-ExpiresByType text/css "access plus 1 week"
-ExpiresByType text/javascript "access plus 1 week"
-ExpiresByType application/javascript "access plus 1 week"
-ExpiresByType application/x-javascript "access plus 1 week"
 ExpiresByType text/html "modified plus 1 week"
+ExpiresByType image/* "access plus 1 month"
+ExpiresByType text/css "access plus 1 month"
+ExpiresByType text/javascript "access plus 1 month"
+ExpiresByType application/javascript "access plus 1 month"
+ExpiresByType application/x-javascript "access plus 1 month"
+ExpiresDefault "access plus 1 week"
 FileEtag MTime Size
 </IfModule>
 
