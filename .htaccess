@@ -1,4 +1,5 @@
 AddCharset UTF-8 .html .js .css .txt .xml
+Header always append X-Frame-Options DENY
 
 # Performances
 <IfModule mod_expires.c>
