@@ -1,7 +1,13 @@
 AddCharset UTF-8 .html .js .css .txt .xml
+
+# Headers
+# sudo a2enmod headers
+<IfModule mod_headers.c>
 Header always append X-Frame-Options DENY
+</IfModule>
 
 # Performances
+# sudo a2enmod expires
 <IfModule mod_expires.c>
 ExpiresActive On
 ExpiresDefault "access plus 1 week"
@@ -14,11 +20,14 @@ ExpiresByType text/html "modified plus 1 week"
 FileEtag MTime Size
 </IfModule>
 
+# Compression
+# sudo a2enmod deflate
 <IfModule mod_deflate.c>
 AddOutputFilterByType DEFLATE text/plain text/css text/javascript application/javascript application/x-javascript text/xml text/html
 </IfModule>
 
 # Feeds
+# sudo a2enmod rewrite
 <IfModule mod_rewrite.c>
 Options +FollowSymlinks
 RewriteEngine On
