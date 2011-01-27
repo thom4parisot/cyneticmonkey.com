@@ -1,6 +1,12 @@
 AddCharset UTF-8 .html .js .css .txt .xml
 
 # Headers
+# sudo a2enmod negociation
+<IfModule mod_negociation.c>
+DefaultLanguage	fr
+</IfModule>
+
+# Headers
 # sudo a2enmod headers
 <IfModule mod_headers.c>
 Header always append X-Frame-Options DENY
