@@ -91,6 +91,17 @@ a.cta:focus{
 	background: -moz-linear-gradient(top,  #f47a20,  #faa51a);
 }
 
+
+a.cta:hover,
+a.cta:focus,
+.orange:active{
+	padding: .8em;
+	-webkit-transition: padding 0.2s ease-in;
+	-moz-transition: padding 0.2s ease-in;
+	-o-transition: padding 0.2s ease-in;
+	transition: padding 0.2s ease-in;
+}
+
 /*
  * Main Logo
  * 
