@@ -11,10 +11,16 @@
  * Basic overloading
  * 
  * TODO build this as a cyneticmonkey-core.css
+ * Use the Trebuchet font stack + Calibri (as recommended)
+ * @see http://articles.sitepoint.com/article/eight-definitive-font-stacks/2
  */
 body{
 	background: #fff;
 	color: #2f1f47;
+	font-family: Calibri, "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
+	font-size: .8em;
+	line-height: 1.125em;
+	*font-size: 16px;
 	margin: 0;
 }
 
@@ -48,7 +54,7 @@ h2{
 	box-shadow: 0 0 4px #a970ff;
 	color: #fff;
 	margin-bottom: 0;
-	padding: 8px 10px;
+	padding: 10px;
 	text-shadow: 1px 1px 1px #2f1f47;
 }
 
@@ -123,8 +129,8 @@ a.cta:focus{
  * Contact Means
  */
 #contact-means{
-	font-size: 1.3em;
-	font-weight: bold;
+	font-size: 1.2em;
+	font-weight: 700;
 	padding-top: .5em;
 	text-align: center;
 }
