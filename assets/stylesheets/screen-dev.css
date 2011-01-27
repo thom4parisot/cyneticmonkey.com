@@ -91,6 +91,19 @@ a.cta:focus{
 	background: -moz-linear-gradient(top,  #f47a20,  #faa51a);
 }
 
+/**
+ * Skip links
+ *
+ */
+#skiplinks{
+	left: -300em;
+	position: absolute;
+}
+
+#skiplinks dt{
+	font-weight: bold;
+}
+
 /*
  * Main Logo
  * 
@@ -103,7 +116,7 @@ a.cta:focus{
 	#logo-placeholder img{
 		height: 274px;
 		display: inline;
-	width: 400px;
+		width: 400px;
 	}
 	
 /*
