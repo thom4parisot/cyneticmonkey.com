@@ -11,13 +11,13 @@
  * Basic overloading
  * 
  * TODO build this as a cyneticmonkey-core.css
- * Use the Trebuchet font stack + Calibri (as recommended)
+ * Use the Trebuchet font stack
  * @see http://articles.sitepoint.com/article/eight-definitive-font-stacks/2
  */
 body{
 	background: #fff;
 	color: #2f1f47;
-	font-family: Calibri, "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
+	font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
 	font-size: .8em;
 	line-height: 1.125em;
 	*font-size: 16px;
