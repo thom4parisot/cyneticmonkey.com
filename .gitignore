@@ -3,3 +3,5 @@
 .tmp*
 .buildpath
 .idea
+.pydevproject
+*.pyc
