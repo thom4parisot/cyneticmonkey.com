@@ -18,9 +18,9 @@ body{
 	background: #fff;
 	color: #2f1f47;
 	font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
-	font-size: .8em;
+	font-size: .9em;
 	line-height: 1.125em;
-	*font-size: 16px;
+	*font-size: 14px;
 	margin: 0;
 }
 
@@ -147,4 +147,38 @@ a.cta:focus,
 
 #contact-means p{
 	margin: 1.7em 0;
+}
+
+/*
+ * Responsive (dual column)
+ */
+@media screen and (max-width: 749px)
+{
+	.page{
+		width: auto !important;
+	}
+	.unit{
+		width: 50%;
+	}
+	.unit:nth-child(even){
+		clear: left;
+	}
+	
+	#logo-placeholder{
+		margin: 0 0 1.5em;
+	}
+	#logo-placeholder img{
+		height: auto;
+		width: 50%;
+	}
+}
+
+@media screen and (max-width: 499px)
+{
+	.unit{
+		clear: none;
+		float: none !important;
+		margin: 0 0 1.5em 0;
+		width: auto !important;	
+	}
 }
