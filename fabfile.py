@@ -6,7 +6,7 @@ from re import sub
 css_dir = 'assets/stylesheets'
 oocss_dir = css_dir+'/oocss/core'
 ycompressor_version = '2.4.6'
-build_version = datetime.now().isoformat()
+build_version = datetime.now().strftime('%Y%M%d%H%m%S')
 
 def build():
     '''
@@ -29,7 +29,7 @@ def build_optimized_html():
     '''
     Process HTML
     '''
-    stylesheet_html = '<link rel="stylesheet" media="all" type="text/css" href="{0}/screen.min.css?v={1}" />'.format(css_dir, build_version)
+    stylesheet_html = '<link rel="stylesheet" media="all" type="text/css" href="{0}/screen.{1}.css" />'.format(css_dir, build_version)
     html_content = open('index-dev.html', 'r').read()
     
     html_content = sub('<link rel="stylesheet"[^>]+ \/>', '', html_content)
