@@ -2,11 +2,29 @@ from datetime import datetime
 from os import system
 from os import remove as os_remove
 from re import sub
+from fabric.api import *
+from fabric.contrib.project import rsync_project
+
+env.hosts = ['oncletom']
 
 css_dir = 'assets/stylesheets'
 oocss_dir = css_dir+'/oocss/core'
 ycompressor_version = '2.4.6'
 build_version = datetime.now().strftime('%Y%M%d%H%m%S')
+
+LOCAL_DIR = '/Users/oncletom/workspace/cyneticmonkey.com/'
+REMOTE_DIR = '~/../www_cyneticmonkey'
+RSYNC_EXCLUDE = (
+    '.project',
+    '.settings',
+    '.tmp*',
+    '.buildpath',
+    '.idea',
+    '*.py*',
+    '*-dev*',
+    '.git*',
+    '.rsyncignore'
+)
 
 def build():
     '''
@@ -65,7 +83,9 @@ def deploy():
     '''
     Deploys files on the remote server
     '''
-    print("Deploy")
+    print("Deploy in progress")
+    rsync_project(local_dir=LOCAL_DIR, remote_dir=REMOTE_DIR, exclude=RSYNC_EXCLUDE, extra_opts='--progress --delete-before')
+    
     
 def get_css_files():
     '''
