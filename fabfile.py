@@ -8,7 +8,7 @@ from fabric.contrib.project import rsync_project
 env.hosts = ['oncletom']
 
 css_dir = 'assets/stylesheets'
-oocss_dir = css_dir+'/oocss/core'
+bootstrap_dir = 'assets/vendor/bootstrap/docs/assets/css'
 ycompressor_version = '2.4.6'
 build_version = datetime.now().strftime('%Y%M%d%H%m%S')
 
@@ -23,7 +23,12 @@ RSYNC_EXCLUDE = (
     '*.py*',
     '*-dev*',
     '.git*',
-    '.rsyncignore'
+    '.rsyncignore',
+    'bootstrap/js/*',
+    '*.less',
+    'build',
+    'examples',
+    '*.mustache'
 )
 
 def build():
@@ -49,19 +54,19 @@ def build_optimized_html():
     '''
     stylesheet_html = '<link rel="stylesheet" media="all" type="text/css" href="{0}/screen.{1}.css" />'.format(css_dir, build_version)
     html_content = open('index-dev.html', 'r').read()
-    
+
     html_content = sub('<link rel="stylesheet"[^>]+ \/>', '', html_content)
     html_content = sub(r'(\r?\n?\t<title>)', stylesheet_html+'\g<1>', html_content)
     html_content = sub(r'\n\t\n', '', html_content)
     html_content = sub(r'\n\t+\n', '\n', html_content)
     html_content = sub(r'\n\n', '\n', html_content)
-    
+
     f = open('index.html', 'w')
     f.write(html_content)
     f.close()
-    
+
     return f.closed
-    
+
 
 def build_static_css():
     '''
@@ -72,11 +77,11 @@ def build_static_css():
 
     for file in get_css_files():
         css_content += open(file, 'r').read()
-        
+
     f = open(css_dir + '/screen.css', 'w')
     f.write(css_content)
     f.close()
-    
+
     return f.closed
 
 def deploy():
@@ -85,19 +90,15 @@ def deploy():
     '''
     print("Deploy in progress")
     rsync_project(local_dir=LOCAL_DIR, remote_dir=REMOTE_DIR, exclude=RSYNC_EXCLUDE, extra_opts='--progress --delete-before')
-    
-    
+
+
 def get_css_files():
     '''
     Returns the list of CSS files used by the website
     '''
     files = []
-    files.append(oocss_dir + '/libraries.css')
-    files.append(oocss_dir + '/template/template.css')
-    files.append(oocss_dir + '/grid/grids.css')
-    files.append(oocss_dir + '/content.css')
-    files.append(oocss_dir + '/heading/heading.css')
-    files.append(oocss_dir + '/spacing/space.css')
+    files.append(bootstrap_dir + '/bootstrap.css')
+    files.append(bootstrap_dir + '/bootstrap-responsive.css')
     files.append(css_dir + '/screen-dev.css')
-    
+
     return files
