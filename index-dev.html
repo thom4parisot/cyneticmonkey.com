@@ -286,6 +286,12 @@
 </div>
 
 <script>
+	document.getElementsByTagName('body')[0].className += (
+		!!document.createElementNS && !!document.createElementNS('http://www.w3.org/2000/svg', 'svg').createSVGRect
+			? 'with-svg'
+			: 'without-svg'
+	);
+
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-20577407-1']);
   _gaq.push(['_trackPageview']);
