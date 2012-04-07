@@ -107,10 +107,18 @@ h4{
  * Respects the spacing policy written by the webdesigner
  */
 #logo-placeholder{
-	background: transparent url('../images/cyneticmonkey.svg') no-repeat center 30px;
+	background: transparent no-repeat center 30px;
 	margin: 0;
-	padding: 235px 67px 10px;		/* 199px + (200px / 3) + 19px  */
+	padding: 67px 67px 10px;		/* 199px + (200px / 3) + 19px  */
 	text-align: center;
+}
+.with-svg #logo-placeholder{
+	background-image: url('../images/cyneticmonkey.svg');
+	padding-top: 235px;
+}
+.without-svg #logo-placeholder{
+	background-image: url('../images/cyneticmonkey.png');
+	padding-top: 235px;
 }
 	#logo-placeholder span{
 		color: #ccd121;

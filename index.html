@@ -2,7 +2,7 @@
 <html lang="fr" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />	
-	<link rel="stylesheet" media="all" type="text/css" href="assets/stylesheets/screen.20121807230446.css" />
+	<link rel="stylesheet" media="all" type="text/css" href="assets/stylesheets/screen.20122707230450.css" />
 	<title>CyneticMonkey − Conseil Web et développement Web à Bordeaux</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="apple-touch-icon" href="assets/images/favicon-hires.png" />
@@ -229,6 +229,11 @@
 	</footer>
 </div>
 <script>
+	document.getElementsByTagName('body')[0].className += (
+		!!document.createElementNS && !!document.createElementNS('http://www.w3.org/2000/svg', 'svg').createSVGRect
+			? 'with-svg'
+			: 'without-svg'
+	);
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-20577407-1']);
   _gaq.push(['_trackPageview']);
