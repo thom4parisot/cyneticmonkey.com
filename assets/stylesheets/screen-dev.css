@@ -19,10 +19,15 @@ body{
 	background: -webkit-radial-gradient(center, ellipse cover, #54A836 0%,#008628 100%);
 	color: #222;
 	font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
-	font-size: .9em;
-	line-height: 1.125em;
-	*font-size: 14px;
+	font-size: 1em;
+	line-height: 1.5;
+	*font-size: 16px;
 	margin: 0;
+}
+
+p{
+	font-size: 1.2em;
+	line-height: 1.5;
 }
 
 a{
@@ -42,27 +47,24 @@ h2,
 h3{
 	color: #fcfcfc;
 	font-family: "MuseoSans500", "Cantarell Bold", Calibri, Verdana, sans-serif;
-	text-shadow: 1px 1px 2px #000, -1px -1px 1px #999;
+	line-height: 1.125;
+	text-shadow: 1px 1px 1px #2f1f47;
 }
 
 
 h1{
 	font-size: 3.5em;
-	line-height: 1;
+	font-weight: normal;
 }
 
 h2{
-	background: #54B933; /* old browsers */
-	background: -moz-linear-gradient(top, #54B933 0%, #00862A 95%); /* firefox */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#54B933), color-stop(95%,#00862A)); /* webkit */
-	border-radius: 5px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	box-shadow: 0 0 4px #a970ff;
 	color: #fff;
-	margin-bottom: 0;
-	padding: 10px;
-	text-shadow: 1px 1px 1px #2f1f47;
+	font-size: 2.5em;
+	margin-top: 1.25em;
+}
+
+h3{
+	font-size: 1.8em;
 }
 
 /*
@@ -133,7 +135,7 @@ a.cta:focus,
  * Respects the spacing policy written by the webdesigner
  */
 #logo-placeholder{
-	background: transparent url('../images/cyneticmonkey.png') no-repeat center 67px;
+	background: transparent url('../images/cyneticmonkey.svg') no-repeat center 67px;
 	margin: 0;
 	padding: 285px 67px 33px;		/* 199px + (200px / 3) + 19px  */
 	text-align: center;
@@ -155,38 +157,4 @@ a.cta:focus,
 
 #contact-means p{
 	margin: 1.7em 0;
-}
-
-/*
- * Responsive (dual column)
- */
-@media screen and (max-width: 749px)
-{
-	.page{
-		width: auto !important;
-	}
-	.unit{
-		width: 50%;
-	}
-	.unit:nth-child(even){
-		clear: left;
-	}
-
-	#logo-placeholder{
-		margin: 0 0 1.5em;
-	}
-	#logo-placeholder img{
-		height: auto;
-		width: 50%;
-	}
-}
-
-@media screen and (max-width: 499px)
-{
-	.unit{
-		clear: none;
-		float: none !important;
-		margin: 0 0 1.5em 0;
-		width: auto !important;
-	}
 }
