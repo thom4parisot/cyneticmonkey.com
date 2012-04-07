@@ -9,14 +9,15 @@
 
 /*
  * Basic overloading
- * 
+ *
  * TODO build this as a cyneticmonkey-core.css
  * Use the Trebuchet font stack
  * @see http://articles.sitepoint.com/article/eight-definitive-font-stacks/2
  */
 body{
 	background: #fff;
-	color: #2f1f47;
+	background: -webkit-radial-gradient(center, ellipse cover, #54A836 0%,#008628 100%);
+	color: #222;
 	font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
 	font-size: .9em;
 	line-height: 1.125em;
@@ -25,11 +26,11 @@ body{
 }
 
 a{
-	color: #00862a;
+	color: #131;
 	text-decoration: underline;
 }
 a:visited{
-	color: #006e23;
+	color: #131;
 }
 a:hover,
 a:focus{
@@ -39,9 +40,15 @@ a:focus{
 h1,
 h2,
 h3{
-	color: #00862a;
+	color: #fcfcfc;
 	font-family: "MuseoSans500", "Cantarell Bold", Calibri, Verdana, sans-serif;
-	text-shadow: 1px 1px #fff, -1px -1px #ddd;
+	text-shadow: 1px 1px 2px #000, -1px -1px 1px #999;
+}
+
+
+h1{
+	font-size: 3.5em;
+	line-height: 1;
 }
 
 h2{
@@ -122,19 +129,20 @@ a.cta:focus,
 
 /*
  * Main Logo
- * 
+ *
  * Respects the spacing policy written by the webdesigner
  */
 #logo-placeholder{
-	margin: 67px;		/* 200px / 3 */
+	background: transparent url('../images/cyneticmonkey.png') no-repeat center 67px;
+	margin: 0;
+	padding: 285px 67px 33px;		/* 199px + (200px / 3) + 19px  */
 	text-align: center;
 }
-	#logo-placeholder img{
-		height: 274px;
-		display: inline;
-		width: 400px;
+	#logo-placeholder span{
+		color: #ccd121;
+		padding-left: .125em;
 	}
-	
+
 /*
  * Contact Means
  */
@@ -163,7 +171,7 @@ a.cta:focus,
 	.unit:nth-child(even){
 		clear: left;
 	}
-	
+
 	#logo-placeholder{
 		margin: 0 0 1.5em;
 	}
@@ -179,6 +187,6 @@ a.cta:focus,
 		clear: none;
 		float: none !important;
 		margin: 0 0 1.5em 0;
-		width: auto !important;	
+		width: auto !important;
 	}
 }
