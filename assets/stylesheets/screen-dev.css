@@ -15,8 +15,14 @@
  * @see http://articles.sitepoint.com/article/eight-definitive-font-stacks/2
  */
 body{
-	background: #fff;
-	background: -webkit-radial-gradient(center, ellipse cover, #54A836 0%,#008628 100%);
+	background: #54a836; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover,  #54a836 0%, #008628 100%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#54a836), color-stop(100%,#008628)); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  #54a836 0%,#008628 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover,  #54a836 0%,#008628 100%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover,  #54a836 0%,#008628 100%); /* IE10+ */
+	background: radial-gradient(center, ellipse cover,  #54a836 0%,#008628 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#54a836', endColorstr='#008628',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 	color: #222;
 	font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
 	font-size: 1em;
@@ -27,6 +33,9 @@ body{
 
 p{
 	font-size: 1.2em;
+}
+
+p, li{
 	line-height: 1.5;
 }
 
@@ -42,9 +51,7 @@ a:focus{
 	text-decoration: none;
 }
 
-h1,
-h2,
-h3{
+h1, h2, h3, h4{
 	color: #fcfcfc;
 	font-family: "MuseoSans500", "Cantarell Bold", Calibri, Verdana, sans-serif;
 	line-height: 1.125;
@@ -67,6 +74,10 @@ h3{
 	font-size: 1.8em;
 }
 
+h4{
+	font-size: 1.6em;
+}
+
 /*
  * OOCSS Extend
  */
@@ -80,40 +91,6 @@ h3{
 	content: "▶";
 	font-size: .8em;
 	margin-right: .4em;
-}
-
-a.cta{
-	background: #faa51a;
-	background: -webkit-gradient(linear, left top, left bottom, from(#faa51a), to(#f47a20));
-	background: -moz-linear-gradient(top,  #faa51a,  #f47a20);
-	border: 1px solid #fff;
-	box-shadow: 0 0 3px #666;
-	border-radius: 6px;
-	color: #fff;
-	padding: .4em;
-	text-decoration: none;
-}
-
-a.cta:hover,
-a.cta:focus{
-	background: #f47c20;
-	background: -webkit-gradient(linear, left top, left bottom, from(#f88e11), to(#f06015));
-	background: -moz-linear-gradient(top,  #f88e11,  #f06015);
-}
-.orange:active {
-	color: #fcd3a5;
-	background: -webkit-gradient(linear, left top, left bottom, from(#f47a20), to(#faa51a));
-	background: -moz-linear-gradient(top,  #f47a20,  #faa51a);
-}
-
-a.cta:hover,
-a.cta:focus,
-.orange:active{
-	padding: .8em;
-	-webkit-transition: padding 0.2s ease-in;
-	-moz-transition: padding 0.2s ease-in;
-	-o-transition: padding 0.2s ease-in;
-	transition: padding 0.2s ease-in;
 }
 
 /**
@@ -148,13 +125,43 @@ a.cta:focus,
 /*
  * Contact Means
  */
-#contact-means{
-	font-size: 1.2em;
-	font-weight: 700;
-	padding-top: .5em;
-	text-align: center;
+footer{
+	background: #004013; /* Old browsers */
+	background: -moz-linear-gradient(top,  #004013 0%, #28501a 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#004013), color-stop(100%,#28501a)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #004013 0%,#28501a 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #004013 0%,#28501a 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #004013 0%,#28501a 100%); /* IE10+ */
+	background: linear-gradient(top,  #004013 0%,#28501a 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#004013', endColorstr='#28501a',GradientType=0 ); /* IE6-9 */
+	border-top: 5px dashed #fff;
+	color: #fff;
+	margin-top: 3em;
 }
 
-#contact-means p{
-	margin: 1.7em 0;
-}
+	footer .row{
+		margin-bottom: 2em;
+	}
+
+	footer h4{
+		margin-bottom: .4em;
+	}
+
+	footer small{
+		color: #eaeaea;
+	}
+
+	footer a,
+	footer a:visited,
+	footer a:link{
+		border-bottom: 1px solid #ffc;
+		color: #ffc;
+		text-decoration: none;
+	}
+	footer a:hover{
+		border: none;
+	}
+
+	footer .thumbnail{
+		margin-right: 1.5em;
+	}
