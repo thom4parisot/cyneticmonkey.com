@@ -78,13 +78,8 @@ h4{
 	font-size: 1.6em;
 }
 
-/*
- * OOCSS Extend
- */
-
-/* extends .line */
-.line-service{
-	margin-bottom: 3em;
+#values{
+	text-align: center;
 }
 
 .link:before{
@@ -112,9 +107,9 @@ h4{
  * Respects the spacing policy written by the webdesigner
  */
 #logo-placeholder{
-	background: transparent url('../images/cyneticmonkey.svg') no-repeat center 67px;
+	background: transparent url('../images/cyneticmonkey.svg') no-repeat center 30px;
 	margin: 0;
-	padding: 285px 67px 33px;		/* 199px + (200px / 3) + 19px  */
+	padding: 235px 67px 10px;		/* 199px + (200px / 3) + 19px  */
 	text-align: center;
 }
 	#logo-placeholder span{
