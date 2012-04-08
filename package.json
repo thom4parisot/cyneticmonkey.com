@@ -10,7 +10,5 @@
     "node": "0.6"
   },
   "dependencies": {},
-  "devDependencies": {
-	  "brewer": "0.3"
-  }
+  "devDependencies": {}
 }
