@@ -1,7 +1,4 @@
-.project
-.settings
 .tmp*
-.buildpath
 .idea
-.pydevproject
 *.pyc
+node_modules
