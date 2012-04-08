@@ -168,3 +168,26 @@ footer{
 	footer .thumbnail{
 		margin-right: 1.5em;
 	}
+
+@media (max-width: 767px){
+	#logo-placeholder{
+		padding-left: 0;
+		padding-right: 0;
+	}
+	footer{
+		margin-left: -20px;
+		margin-right: -20px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+@media (max-width: 480px){
+	#logo-placeholder{
+		background-size: 80%;
+		margin: 0 auto;
+		max-width: 400px;
+		padding-top: 50% !important;
+		font-size: 2.5em;
+	}
+}
