@@ -1,0 +1,16 @@
+{
+  "author": "Thomas Parisot <ping@cyneticmonkey.com> (http://case.oncle-tom.net)",
+  "name": "cyneticmonkey.com",
+  "version": "2.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git@p.cyneticmonkey.com:cyneticmonkey/cyneticmonkey-website.git"
+  },
+  "engines": {
+    "node": "0.6"
+  },
+  "dependencies": {},
+  "devDependencies": {
+	  "brewer": "0.3"
+  }
+}
