@@ -8,8 +8,8 @@ from fabric.contrib.project import rsync_project
 env.hosts = ['oncletom']
 
 css_dir = 'assets/stylesheets'
+yuicompressor_binpath = '/usr/local/bin/yuicompressor'
 bootstrap_dir = 'assets/vendor/bootstrap/docs/assets/css'
-ycompressor_version = '2.4.6'
 build_version = datetime.now().strftime('%Y%M%d%H%m%S')
 
 LOCAL_DIR = '/Users/oncletom/workspace/cyneticmonkey.com/'
@@ -44,8 +44,7 @@ def build_optimized_css():
     '''
     Process CSS by YUICompressor
     '''
-    yuicompressor_binpath = '/Users/oncletom/bin/yuicompressor/build/yuicompressor-{0}.jar'.format(ycompressor_version)
-    system('java -jar {0} --verbose --nomunge -o {1}/screen.min.css {1}/screen.css'.format(yuicompressor_binpath, css_dir))
+    system('{0} --verbose --nomunge -o {1}/screen.min.css {1}/screen.css'.format(yuicompressor_binpath, css_dir))
     os_remove(css_dir + '/screen.css')
 
 def build_optimized_html():
