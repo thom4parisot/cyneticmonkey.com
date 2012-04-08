@@ -39,6 +39,10 @@ p, li{
 	line-height: 1.5;
 }
 
+small, h1 small, h2 small, h3 small, p small{
+	color: #eaeaea;
+}
+
 a{
 	color: #131;
 	text-decoration: underline;
@@ -148,10 +152,6 @@ footer{
 
 	footer h4{
 		margin-bottom: .4em;
-	}
-
-	footer small{
-		color: #eaeaea;
 	}
 
 	footer a,
