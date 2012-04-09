@@ -58,6 +58,7 @@ a:focus{
 h1, h2, h3, h4{
 	color: #fcfcfc;
 	font-family: "MuseoSans500", "Cantarell Bold", Calibri, Verdana, sans-serif;
+	font-weight: normal;
 	line-height: 1.125;
 	text-shadow: 1px 1px 1px #2f1f47;
 }
