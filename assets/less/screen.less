@@ -45,7 +45,7 @@
 //@import "labels-badges.less";
 //@import "progress-bars.less";
 //@import "accordion.less";
-//@import "carousel.less";
+@import "carousel.less";
 //@import "hero-unit.less";
 
 // Components: Misc
@@ -93,7 +93,8 @@ a{
   text-decoration: underline;
 }
 a:hover,
-a:focus{
+a:focus,
+.carousel-control{
   text-decoration: none;
 }
 
@@ -170,13 +171,36 @@ h4{
 }
 
 /*
+ * Container inverted
+ */
+.inverted{
+  #gradient .vertical(darken(@greenDark, 15%), darken(@greenDark, 18%));
+  border-bottom: 5px dashed #fff;
+  border-top: 5px dashed #fff;
+  color: @white;
+  margin-bottom: 3em;
+  margin-top: 3em;
+}
+
+/*
+ * Projects
+ */
+#projects{
+  margin-bottom: 0;
+
+  .item{
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;
+  }
+}
+
+/*
  * Contact Means
  */
 footer{
-  #gradient .vertical(darken(@greenDark, 15%), darken(@greenDark, 18%));
-  border-top: 5px dashed #fff;
-  color: @white;
-  margin-top: 3em;
+  border-bottom: none !important;
+  margin-bottom: 0 !important;
 }
 
 footer .row{
@@ -207,11 +231,14 @@ footer .thumbnail{
     padding-left: 0;
     padding-right: 0;
   }
-  footer{
+  .inverted{
     margin-left: -20px;
     margin-right: -20px;
     padding-left: 20px;
     padding-right: 20px;
+  }
+  #projects-container{
+    padding: 0;
   }
 }
 
@@ -222,5 +249,11 @@ footer .thumbnail{
     max-width: 400px;
     padding-top: 50% !important;
     font-size: 2.5em;
+  }
+
+  #projects-container{
+    .item{
+      height: auto;
+    }
   }
 }

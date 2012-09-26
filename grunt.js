@@ -26,6 +26,21 @@ module.exports = function(grunt) {
         }
       }
     },
+    concat: {
+      main: {
+        src: [
+          'assets/vendor/bootstrap/docs/assets/js/jquery.js',
+          'assets/vendor/bootstrap/js/bootstrap-carousel.js'
+        ],
+        dest: 'assets/js/main.js'
+      }
+    },
+    min: {
+      main: {
+        src: '<config:concat.main.dest>',
+        dest: 'assets/js/main.min.js'
+      }
+    },
     watch: {
       files: [
         'assets/less/**'
@@ -35,6 +50,6 @@ module.exports = function(grunt) {
   });
 
   // Default task.
-  grunt.registerTask('default', 'less');
+  grunt.registerTask('default', 'less concat min');
 
 };
