@@ -18,14 +18,17 @@ module.exports = function(grunt) {
         'assets/stylesheets/main.css': 'assets/less/*.less'
       },
       options: {
-          paths: [ 'assets/vendor/bootstrap/less' ],
+          paths: [
+            'assets/less/components',
+            'assets/vendor/bootstrap/less'
+          ],
           yuicompress: true
         }
       }
     },
     watch: {
       files: [
-        'assets/less/*.less'
+        'assets/less/**'
       ],
       tasks: [ 'less' ]
     }
