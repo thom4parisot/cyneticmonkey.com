@@ -158,15 +158,17 @@ a){var b=F.exec(a);b&&(b[1]=(b[1]||"").toLowerCase(),b[3]=b[3]&&new RegExp("(?:^
         , direction = type == 'next' ? 'left' : 'right'
         , fallback  = type == 'next' ? 'first' : 'last'
         , that = this
-        , e = $.Event('slide', {
-            relatedTarget: $next[0]
-          })
+        , e;
 
       this.sliding = true
 
       isCycling && this.pause()
 
       $next = $next.length ? $next : this.$element.find('.item')[fallback]()
+
+      e = $.Event('slide', {
+        relatedTarget: $next[0]
+      })
 
       if ($next.hasClass('active')) return
 
@@ -238,3 +240,47 @@ a){var b=F.exec(a);b&&(b[1]=(b[1]||"").toLowerCase(),b[3]=b[3]&&new RegExp("(?:^
   })
 
 }(window.jQuery);
+(function($, undefined){
+  /*
+   * Detect resolution
+   */
+  if ($('#projects').css('height') < '400px'){
+    return;
+  }
+
+  /*
+   * Checking if cover is loaded
+   */
+  function isCoverLoaded($el){
+    return $el && $el.css('background-image') !== 'none';
+  }
+
+  /*
+   * Item loading function
+   */
+  function loadCover($el){
+    $el.css('background-image', 'url('+$el.data('cover')+')');
+  }
+
+  function loadFirstCover(){
+    loadCover($('#projects .item.active'));
+  }
+
+  /*
+   * Load on scroll
+   */
+  $(window).height() + 200 >= $('#projects').offset().top
+    ? loadFirstCover()
+    : $(window).one('scroll', loadFirstCover);
+
+  /*
+   * Load on event
+   */
+  $('#projects').on('slide', function(e){
+    if (e.relatedTarget === undefined){
+      return;
+    }
+
+    loadCover($(e.relatedTarget));
+  });
+})(jQuery);

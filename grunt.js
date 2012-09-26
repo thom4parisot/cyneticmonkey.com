@@ -31,7 +31,8 @@ module.exports = function(grunt) {
         src: [
           'assets/vendor/bootstrap/docs/assets/js/jquery.js',
           'assets/vendor/bootstrap/js/bootstrap-transition.js',
-          'assets/vendor/bootstrap/js/bootstrap-carousel.js'
+          'assets/vendor/bootstrap/js/bootstrap-carousel.js',
+          'assets/js/carousel-optimized.js'
         ],
         dest: 'assets/js/main.js'
       }
@@ -44,9 +45,10 @@ module.exports = function(grunt) {
     },
     watch: {
       files: [
-        'assets/less/**'
+        'assets/less/**',
+        'assets/js/carousel-optimized.js'
       ],
-      tasks: [ 'less' ]
+      tasks: [ 'less concat min' ]
     }
   });
 
