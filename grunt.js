@@ -30,6 +30,7 @@ module.exports = function(grunt) {
       main: {
         src: [
           'assets/vendor/bootstrap/docs/assets/js/jquery.js',
+          'assets/vendor/bootstrap/js/bootstrap-transition.js',
           'assets/vendor/bootstrap/js/bootstrap-carousel.js'
         ],
         dest: 'assets/js/main.js'
