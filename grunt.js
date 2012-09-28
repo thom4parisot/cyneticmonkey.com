@@ -20,7 +20,7 @@ module.exports = function(grunt) {
       options: {
           paths: [
             'assets/less/components',
-            'assets/vendor/bootstrap/less'
+            'vendor/bootstrap/less'
           ],
           yuicompress: true
         }
@@ -30,8 +30,8 @@ module.exports = function(grunt) {
       main: {
         src: [
           'assets/js/jquery.js',
-          'assets/vendor/bootstrap/js/bootstrap-transition.js',
-          'assets/vendor/bootstrap/js/bootstrap-carousel.js',
+          'vendor/bootstrap/js/bootstrap-transition.js',
+          'vendor/bootstrap/js/bootstrap-carousel.js',
           'assets/js/carousel-optimized.js'
         ],
         dest: 'assets/js/main.js'
