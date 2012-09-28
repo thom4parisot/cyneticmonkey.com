@@ -7726,7 +7726,7 @@ if ( typeof define === "function" && define.amd && define.amd.jQuery ) {
   });
 })(jQuery);
 (function($, undefined){
-  $('body').on('click touchstart', '.content [class^="span"]', function(){
-    $(this).toggleClass('active')
+  $('body').on('click touchstart', '.content .span4', function(){
+    $(this).toggleClass('active');
   });
 })(jQuery);

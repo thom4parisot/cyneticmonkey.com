@@ -264,6 +264,10 @@ footer .thumbnail{
     font-size: 1.8em;   //same as h3
   }
 
+  footer{
+    font-size: .9em;
+  }
+
   #logo-placeholder{
     background-size: 80%;
     margin: 0 auto;
@@ -282,9 +286,22 @@ footer .thumbnail{
     display: none;
   }
 
-  .content [class^="span"]{
+  .content .span4{
+    background-color: @greenDark;
+    padding: @gridGutterWidth / 2;
+
+    &:first-of-type{
+      border-radius: @inputBorderRadius @inputBorderRadius 0 0;
+    }
+    &:last-of-type{
+      border-radius: 0 0 @inputBorderRadius @inputBorderRadius;
+    }
+
     h3{
       cursor: pointer;
+      font-size: 1.5em;
+      margin-bottom: 0;
+      margin-top: 0;
     }
 
     p{
@@ -295,4 +312,11 @@ footer .thumbnail{
       display: block;
     }
   }
+
+  //fixing double row corners
+  #services .span4:last-of-type,
+  #services ~ .row .span4:first-of-type{
+    border-radius: 0;
+  }
+
 }
