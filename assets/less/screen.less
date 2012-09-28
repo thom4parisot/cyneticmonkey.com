@@ -260,6 +260,10 @@ footer .thumbnail{
 }
 
 @media (max-width: 480px){
+  h2{
+    font-size: 1.8em;   //same as h3
+  }
+
   #logo-placeholder{
     background-size: 80%;
     margin: 0 auto;
@@ -271,6 +275,24 @@ footer .thumbnail{
   #projects-container{
     .item{
       height: auto;
+    }
+  }
+
+  [data-slide]{
+    display: none;
+  }
+
+  .content [class^="span"]{
+    h3{
+      cursor: pointer;
+    }
+
+    p{
+      display: none;
+    }
+
+    &.active p{
+      display: block;
     }
   }
 }

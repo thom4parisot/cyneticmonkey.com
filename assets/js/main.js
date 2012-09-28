@@ -7725,3 +7725,8 @@ if ( typeof define === "function" && define.amd && define.amd.jQuery ) {
     loadCover($(e.relatedTarget));
   });
 })(jQuery);
+(function($, undefined){
+  $('body').on('click touchstart', '.content [class^="span"]', function(){
+    $(this).toggleClass('active')
+  });
+})(jQuery);
