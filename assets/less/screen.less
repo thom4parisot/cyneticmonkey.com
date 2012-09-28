@@ -289,6 +289,11 @@ footer .thumbnail{
   .content .span4{
     background-color: @greenDark;
     padding: @gridGutterWidth / 2;
+    position: relative;
+
+    &:hover, &:active{
+      background-color: darken(@greenDark, 3%);
+    }
 
     &:first-of-type{
       border-radius: @inputBorderRadius @inputBorderRadius 0 0;
@@ -302,6 +307,14 @@ footer .thumbnail{
       font-size: 1.5em;
       margin-bottom: 0;
       margin-top: 0;
+
+      &:after{
+        content: "◢";
+        font-size: 14px;
+        position: absolute;
+        right: @gridGutterWidth / 2;
+        top: 1.5em;
+      }
     }
 
     p{
@@ -310,6 +323,10 @@ footer .thumbnail{
 
     &.active p{
       display: block;
+    }
+
+    &.active h3:after{
+      color: @grayDark;
     }
   }
 
