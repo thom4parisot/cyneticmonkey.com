@@ -29,7 +29,7 @@ module.exports = function(grunt) {
     concat: {
       main: {
         src: [
-          'assets/vendor/bootstrap/docs/assets/js/jquery.js',
+          'assets/js/jquery.js',
           'assets/vendor/bootstrap/js/bootstrap-transition.js',
           'assets/vendor/bootstrap/js/bootstrap-carousel.js',
           'assets/js/carousel-optimized.js'
