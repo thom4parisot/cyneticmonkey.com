@@ -1,0 +1,48 @@
+.header{
+  margin: 3em auto;
+
+  a{
+    color: @linkColorHover;
+    text-decoration: none;
+
+    &:hover, &:focus{
+      color: @grayDark;
+      text-decoration: none;
+    }
+  }
+
+  h1,
+  blockquote{
+    margin-bottom: 0.1em;
+    padding-left: 0;
+  }
+
+  h1{
+    font-size: 4em;
+    text-shadow: 1px 1px 1px #2f1f47;
+
+    &, a{
+      color: @white;
+    }
+
+    a:hover, a:focus{
+      color: @grayLighter;
+    }
+
+    span{
+      color: #ccd121;
+    }
+  }
+
+  blockquote{
+    border: none;
+    font-family: @monoFontFamily;
+    margin-bottom: .25em;
+  }
+}
+
+@media (max-width: 767px){
+  #header h1{
+    font-size: @fontSizeLarge * 2;
+  }
+}

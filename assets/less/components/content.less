@@ -1,0 +1,103 @@
+.box(@radius: 2px){
+  #translucent .background(@white, .4);
+  border: none;
+  .border-radius(@radius);
+  .box-shadow(0 0 @gridGutterWidth/2 @gray);
+
+  .transition(box-shadow .2s ease-out);
+
+  &:hover, &:focus{
+    .box-shadow(0 0 @gridGutterWidth/1.5 darken(@green, 35%));
+  }
+}
+
+article, .article, aside, .thumbnail{
+  .box();
+  position: relative;
+
+  &:last-child{
+    margin-bottom: 0;
+  }
+}
+
+article h2,
+.article header,
+.menu > li,
+.thumbnail h3{
+  #translucent .background(#fff, .4);
+  .border-radius(2px 2px 0 0);
+  font-size: 1.3em;
+  margin: 0;
+  padding: @gridGutterWidth / 2;
+
+  & > a{
+    display: block;
+    .text-overflow();
+  }
+}
+
+.thumbnail h3{
+  @margin: (-4px) + (-9px);
+
+  border-radius: 0;
+  line-height: 1.33;
+  margin: 0 @margin .5em;
+}
+
+article, .article{
+  min-height: 200px;
+  margin-bottom: @gridGutterWidth;
+
+  body.single &,
+  body.page &{
+    height: auto;
+  }
+
+  .excerpt, .content, #commentform, #responses{
+    padding: @gridGutterWidth / 2;
+
+    a{
+      text-decoration: underline;
+
+      &:hover, &:focus{
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.post-cover{
+  background: #fff;
+  text-align: center;
+}
+
+.navigation{
+  .previous-next a{
+    font-weight: bold;
+  }
+
+  .nav-link a{
+    display: block;
+    font-size: 2em;
+    height: 100%;
+    line-height: 6;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px){
+  article, .article{
+    min-height: 0;
+  }
+}
+
+@media (max-width: 979px){
+  article, .article{
+    height: auto;
+
+    .excerpt{
+      max-height: none;
+    }
+  }
+}

@@ -1,0 +1,93 @@
+.sticky{
+  position: fixed;
+  top: 1.5em;
+}
+
+aside{
+  &.sticky{
+    float: none;
+    margin-left: 780px + @gridGutterWidth*2;
+  }
+
+  img{
+    .transition(box-shadow .2s ease-out);
+
+    &:hover, &:focus{
+      .box-shadow(0 0 25px #fff);
+    }
+  }
+
+  .about{
+    margin-bottom: 0;
+  }
+
+  .widget, .menu{
+    list-style: none;
+    margin: 0;
+  }
+
+  .widget-compact{
+    > div, > ol, > ul{
+      display: none;
+    }
+  }
+
+  .widget_rss{
+    .widgettitle .rsswidget:first-child{
+      display: none;
+    }
+  }
+
+  .menu-item{
+    position: relative;
+
+    a::after{
+      font-family: JustVectorRegular;
+      font-size: 2em;
+      position: absolute;
+      right: 5px;
+    }
+
+    a[href$='/feed/']::after{
+      content: "*";
+      font-size: 1.8em;
+    }
+    a[href*='twitter.com']::after{
+      content: "_";
+    }
+
+    a[href*='flickr.com']::after{
+      content: "b";
+    }
+
+    a[href*='github.com']::after{
+      content: "j";
+    }
+  }
+}
+
+@media (max-width: 767px){
+  .about{
+    display: none;
+  }
+
+  aside.sticky{
+    margin-left: 0;
+    position: static;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+  aside{
+    &.sticky{
+      margin-left: 600px + @gridGutterWidth*2;
+    }
+
+    .menu-item{
+      a::after{
+        display: none;
+        font-family: @baseFontFamily;
+      }
+    }
+  }
+}

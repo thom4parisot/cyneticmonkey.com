@@ -15,7 +15,8 @@ module.exports = function(grunt) {
     less: {
       main: {
       files: {
-        'assets/stylesheets/main.css': 'assets/less/*.less'
+        'assets/stylesheets/fonts.css': 'assets/less/fonts.less',
+        'assets/stylesheets/main.css': 'assets/less/screen.less'
       },
       options: {
           paths: [
@@ -29,10 +30,6 @@ module.exports = function(grunt) {
     concat: {
       main: {
         src: [
-          'assets/js/jquery.js',
-          'vendor/bootstrap/js/bootstrap-transition.js',
-          'vendor/bootstrap/js/bootstrap-carousel.js',
-          'assets/js/carousel-optimized.js',
           'assets/js/responsive.js'
         ],
         dest: 'assets/js/main.js'
@@ -47,7 +44,6 @@ module.exports = function(grunt) {
     watch: {
       files: [
         'assets/less/**',
-        'assets/js/carousel-optimized.js',
         'assets/js/responsive.js'
       ],
       tasks: 'less concat min'

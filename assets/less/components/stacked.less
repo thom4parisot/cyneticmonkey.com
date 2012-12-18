@@ -1,0 +1,35 @@
+.stacked{
+  list-style: none;
+  border-top-left-radius: 2px;
+  padding: .4em;
+
+  #translucent .background(#fff, .4);
+
+  .value{
+    font-weight: bold;
+  }
+}
+
+.stacked-horizontal{
+  border-bottom-right-radius: 2px;
+  margin: 0;
+
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  > li{
+    border-right: 1px solid @grayLight;
+
+    &:last-child{
+      border-right: none;
+    }
+  }
+}
+
+@media (max-width: 767px){
+  .stacked-horizontal{
+    border-radius: 0 0 2px 2px;
+    position: static;
+  }
+}
