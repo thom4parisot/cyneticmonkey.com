@@ -13,16 +13,17 @@
 
     return function onScroll(e) {
       var globalOffsetHeight = window.pageYOffset + el.clientHeight + el.offsetTop;
+      var isSticky;
 
-      window.scrollY >= origOffsetY ? el.classList.add('sticky') :
-        el.classList.remove('sticky');
+      window.scrollY >= origOffsetY ? el.classList.add('sticky') : el.classList.remove('sticky');
+      isSticky = el.classList.contains('sticky');
 
-      if (!el.style.top && globalOffsetHeight > origMaxOffsetY){
+      if (isSticky && !el.style.top && globalOffsetHeight > origMaxOffsetY){
         el.dataset.offsetSticky = el.offsetTop;
         el.style.top = (origMaxOffsetY - el.clientHeight)+'px';
         el.style.position = 'absolute';
       }
-      else if(el.style.top && window.pageYOffset < (el.offsetTop - el.dataset.offsetSticky)){
+      else if(isSticky && el.style.top && window.pageYOffset < (el.offsetTop - el.dataset.offsetSticky)){
         el.style.top = el.style.position = null;
       }
     };
