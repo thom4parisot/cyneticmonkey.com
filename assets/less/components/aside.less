@@ -39,7 +39,12 @@ aside{
   }
 
   .menu-item{
+    line-height: @baseLineHeight;
     position: relative;
+
+    a:link, a:visited{
+      text-decoration: none;
+    }
 
     a::after{
       font-family: JustVectorRegular;
