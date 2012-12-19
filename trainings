@@ -108,7 +108,7 @@
         <aside class="span2 hidden-phone">
             <p class="about">
                 <a href="https://case.oncle-tom.net/slash-me" rel="me" class="about">
-                    <img src="//1.gravatar.com/avatar/333c06724ad975ef667b80c1c17271a9?s=140&d=&r=G" class="avatar avatar-140" alt="">
+                    <img src="//1.gravatar.com/avatar/333c06724ad975ef667b80c1c17271a9?s=140&amp;d=&amp;r=G" class="avatar avatar-140" alt="">
                 </a>
             </p>
 
