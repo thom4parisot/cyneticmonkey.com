@@ -35,8 +35,45 @@
     target.classList && target.classList.toggle('in');
   };
 
+  /**
+   * @this Element
+   */
+  var heightAdjuster = function(el){
+    var source = Array.prototype.slice.call(el.querySelectorAll(el.dataset.source));
+    var target = Array.prototype.slice.call(el.querySelectorAll(el.dataset.target));
+    var length = el.dataset.verticalResize;
+
+    while (source.length){
+      adjustHeightFor(target.splice(0, length), source.splice(0, length));
+    }
+
+    function adjustHeightFor(targets, source){
+      var maxHeight = getMaxHeight(source);
+
+      targets.forEach(function(el){
+        el.style.height = maxHeight+'px';
+      });
+    }
+
+    function getMaxHeight(elements){
+      var maxHeight = 0;
+
+      Array.prototype.forEach.call(elements, function(el){
+        if (el.clientHeight > maxHeight){
+          maxHeight = el.clientHeight + (el.style.paddingTop || 0) + (el.style.paddingBottom || 0);
+        }
+      });
+
+      return maxHeight;
+    }
+  };
+
   if (document.querySelector && document.addEventListener){
     document.addEventListener('scroll', onScroll);
     document.querySelector('#services [data-toggle="collapse"]').addEventListener('click', toggleCollapse);
+
+    window.addEventListener('load', function(){
+      Array.prototype.slice.call(document.querySelectorAll('[data-vertical-resize][data-target]')).map(heightAdjuster);
+    });
   }
 })(document);
