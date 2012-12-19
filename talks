@@ -148,6 +148,8 @@
     <ul class="thumbnails">
         <li class="span4">
             <div class="thumbnail">
+                <img src="/assets/images/talks/takeoff-2013.jpg" alt="">
+
                 <div class="caption" lang="en">
                     <h3>Business Logic in the Cloud with Google Apps Script</h3>
 
@@ -163,6 +165,8 @@
         </li>
         <li class="span4">
             <div class="thumbnail">
+                <img src="/assets/images/talks/parisweb-2012.jpg" alt="">
+
                 <div class="caption">
                     <h3>README : un fichier nommé plaisir</h3>
 
@@ -176,6 +180,8 @@
         </li>
         <li class="span4">
             <div class="thumbnail">
+                <img src="/assets/images/talks/parisweb-2011.jpg" alt="">
+
                 <div class="caption">
                     <h3>Industrialisation de l'intégration Web : la révolution de l'artisan devenu ouvrier</h3>
 
@@ -191,6 +197,8 @@
         </li>
         <li class="span4">
             <div class="thumbnail">
+                <img src="/assets/images/talks/parisweb-2010.jpg" alt="">
+
                 <div class="caption">
                     <h3>Industrialiser l'artisanat de l'intégration Web</h3>
 
