@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" media="all" type="text/css" href="assets/stylesheets/fonts.css" />
-    <link rel="stylesheet" media="all" type="text/css" href="assets/stylesheets/main.css" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" media="all" type="text/css" href="assets/stylesheets/fonts.css">
+    <link rel="stylesheet" media="all" type="text/css" href="assets/stylesheets/main.css">
     <title>Conférences et publications de Thomas Parisot — Expert Web JavaScript full-stack, HTML5, mobile et data à Bordeaux</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="apple-touch-icon" href="assets/images/favicon-hires.png" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <meta name="description" content="CyneticMonkey développe vos applications Web grâce à JavaScript et HTML5. 10 ans d'expérience pour concevoir des applications sur mesure, de qualité et répondant aux attentes de vos utilisateurs." />
-    <meta name="keywords" content="expert,technique,fonctionnel,wordpress,symfony,html,html4,html5,css,css2,css3,javascript,js,jquery,nodejs,mongodb,php,php4,php5,php6,performances,web,bordeaux,cub,aquitaine,gironde,amoa,internet" />
-    <link rel="publisher" href="https://plus.google.com/102117814105942363228" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" href="assets/images/favicon-hires.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="description" content="CyneticMonkey développe vos applications Web grâce à JavaScript et HTML5. 10 ans d'expérience pour concevoir des applications sur mesure, de qualité et répondant aux attentes de vos utilisateurs.">
+    <meta name="keywords" content="expert,technique,fonctionnel,wordpress,symfony,html,html4,html5,css,css2,css3,javascript,js,jquery,nodejs,mongodb,php,php4,php5,php6,performances,web,bordeaux,cub,aquitaine,gironde,amoa,internet">
+    <link rel="publisher" href="https://plus.google.com/102117814105942363228">
 </head>
 <body>
 <dl id="skiplinks">
@@ -237,8 +237,8 @@
 
                 <h4>CyneticMonkey</h4>
                 <p>
-                    <abbr title="Société à responsabilité limité">SARL</abbr> au capital de 4000€<br />
-                    SIRET : 529399479&nbsp;00011<br />
+                    <abbr title="Société à responsabilité limité">SARL</abbr> au capital de 4000€<br>
+                    SIRET : 529399479&nbsp;00011<br>
                     <a href="https://plus.google.com/102117814105942363228">26 rue du chai des farines, 33000 BORDEAUX, France</a>
                 </p>
             </div>
