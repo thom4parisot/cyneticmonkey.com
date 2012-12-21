@@ -175,13 +175,15 @@
     <div class="container">
         <div class="row" id="contact" itemtype="http://www.data-vocabulary.org/Organization/" itemscope>
             <div class="span12">
-                <h2><a href="http://fr.linkedin.com/in/thomasparisot" title="Profil LinkedIn de Thomas Parisot">Thomas Parisot</a> vit à Bordeaux …</h2>
+                <h2><a href="http://fr.linkedin.com/in/thomasparisot" title="Profil LinkedIn de Thomas Parisot">Thomas Parisot</a> travaille avec vous  …</h2>
                 <h3>… et c'est son entreprise <span itemprop="name">CyneticMonkey</span> qui vous facture !</h3>
                 <p>En général,
                     on s'<b>appelle</b> <small>(via <a href="skype:thomas.parisot">Skype</a> ou <a href="tel:+33608403549" itemprop="tel" title="06 08 40 35 49">tél.</a>)</small>,
                     on s'<b>interpelle</b> <small>(via <a href="https://twitter.com/oncletom">Twitter</a> ou <a href="mailto:&#112;&#105;&#110;&#103;&#064;&#099;&#121;&#110;&#101;&#116;&#105;&#099;&#109;&#111;&#110;&#107;&#101;&#121;&#046;&#099;&#111;&#109;" title="&#112;&#105;&#110;&#103;&#064;&#099;&#121;&#110;&#101;&#116;&#105;&#099;&#109;&#111;&#110;&#107;&#101;&#121;&#046;&#099;&#111;&#109;">mél.</a>)</small>
                     ou on va <b>prendre un verre</b> <small>(genre un ballon de Beychevelle)</small>.
                 </p>
+
+                <p>C'est comme ça que j'aime débuter de belles histoires.</p>
             </div>
         </div>
         <div class="row">
@@ -194,7 +196,7 @@
                 <p>
                     <abbr title="Société à responsabilité limité">SARL</abbr> au capital de 4000€<br>
                     SIRET : 529399479&nbsp;00011<br>
-                    <a href="https://plus.google.com/102117814105942363228" rel="publisher">26 rue du chai des farines, 33000 BORDEAUX, France</a>
+                    <small><a href="https://plus.google.com/102117814105942363228" rel="publisher">26 rue du chai des farines, 33000 Bordeaux, France</a></small>
                 </p>
             </div>
         </div>
