@@ -176,7 +176,7 @@
         <div class="row" id="contact" itemtype="http://www.data-vocabulary.org/Organization/" itemscope>
             <div class="span12">
                 <h2><a href="http://fr.linkedin.com/in/thomasparisot" title="Profil LinkedIn de Thomas Parisot">Thomas Parisot</a> travaille avec vous  …</h2>
-                <h3>… et c'est son entreprise <span itemprop="name">CyneticMonkey</span> qui vous facture !</h3>
+                <h3>… et c'est son entreprise <a href="#company" data-toggle="collapse" data-target="#company" itemprop="name">CyneticMonkey</a> qui vous facture !</h3>
                 <p>En général,
                     on s'<b>appelle</b> <small>(via <a href="skype:thomas.parisot">Skype</a> ou <a href="tel:+33608403549" itemprop="tel" title="06 08 40 35 49">tél.</a>)</small>,
                     on s'<b>interpelle</b> <small>(via <a href="https://twitter.com/oncletom">Twitter</a> ou <a href="mailto:&#112;&#105;&#110;&#103;&#064;&#099;&#121;&#110;&#101;&#116;&#105;&#099;&#109;&#111;&#110;&#107;&#101;&#121;&#046;&#099;&#111;&#109;" title="&#112;&#105;&#110;&#103;&#064;&#099;&#121;&#110;&#101;&#116;&#105;&#099;&#109;&#111;&#110;&#107;&#101;&#121;&#046;&#099;&#111;&#109;">mél.</a>)</small>
@@ -186,7 +186,8 @@
                 <p>C'est comme ça que j'aime débuter de belles histoires.</p>
             </div>
         </div>
-        <div class="row">
+
+        <div class="row collapse" id="company">
             <div class="span7 details">
                 <div class="thumbnail pull-left">
                     <img src="http://www.gravatar.com/userimage/571561/296a3b35f12a3b68ea78c41bf6ae02d0.png?size=100" width="100" height="100" alt="">
