@@ -29,7 +29,9 @@
     };
   })('aside');
 
-  var toggleCollapse = function(){
+  var toggleCollapse = function(e){
+    e.preventDefault();
+
     var target = document.querySelector(this.dataset.target || '.nav-collapse');
 
     target.classList && target.classList.toggle('in');
@@ -70,7 +72,11 @@
 
   if (document.querySelector && document.addEventListener){
     document.addEventListener('scroll', onScroll);
-    document.querySelector('#services [data-toggle="collapse"]').addEventListener('click', toggleCollapse);
+    document.addEventListener('click', function collapseDelegator(e){
+      if (e.target && e.target.getAttribute('data-toggle') === 'collapse'){
+        toggleCollapse.call(e.target, e);
+      }
+    });
 
     window.addEventListener('load', function(){
       Array.prototype.slice.call(document.querySelectorAll('[data-vertical-resize][data-target]')).map(heightAdjuster);
