@@ -1,22 +1,41 @@
+// shim layer with setTimeout fallback
+window.requestAnimFrame = (function(){
+  return  window.requestAnimationFrame       ||
+    window.webkitRequestAnimationFrame ||
+    window.mozRequestAnimationFrame    ||
+    window.oRequestAnimationFrame      ||
+    window.msRequestAnimationFrame     ||
+    function( callback ){
+      window.setTimeout(callback, 1000 / 60);
+    };
+})();
+
 (function(document, undefined){
   var onScroll = (function(tag){
-    var el, origOffsetY, origMaxOffsetY, noop = function(){};
+    var el, origOffsetY, origMaxOffsetY, prevOffset;
 
     el = document.querySelector(tag);
 
     if (!el){
-      return noop;
+      return function noop(){};
     }
 
     origOffsetY = el.offsetTop;
     origMaxOffsetY = el.parentNode.offsetTop + el.parentNode.clientHeight;
+    prevOffset = origOffsetY;
 
     return function onScroll(e) {
       var globalOffsetHeight = window.pageYOffset + el.clientHeight + el.offsetTop;
       var isSticky;
 
+      // No need to render position if nothing changed since last frame
+      if (prevOffset === globalOffsetHeight){
+        return;
+      }
+
       window.scrollY >= origOffsetY ? el.classList.add('sticky') : el.classList.remove('sticky');
       isSticky = el.classList.contains('sticky');
+      prevOffset = globalOffsetHeight;
 
       if (isSticky && !el.style.top && globalOffsetHeight > origMaxOffsetY){
         el.dataset.offsetSticky = el.offsetTop;
@@ -70,16 +89,35 @@
     }
   };
 
+  /**
+   * Default animation loop to deal with regular rendering
+   */
+  var animLoop = function animLoop(){
+    requestAnimFrame(animLoop);
+
+    onScroll();
+  };
+
+  /**
+   * OnLoad stuff
+   */
   if (document.querySelector && document.addEventListener){
-    document.addEventListener('scroll', onScroll);
     document.addEventListener('click', function collapseDelegator(e){
       if (e.target && e.target.getAttribute('data-toggle') === 'collapse'){
         toggleCollapse.call(e.target, e);
       }
     });
 
-    window.addEventListener('load', function(){
-      Array.prototype.slice.call(document.querySelectorAll('[data-vertical-resize][data-target]')).map(heightAdjuster);
+    requestAnimFrame(function onLoadRendering(){
+      var els = document.querySelectorAll('[data-vertical-resize][data-target]');
+
+      Array.prototype.slice.call(els).map(heightAdjuster);
+
+      // Initializing scroll stuff
+      onScroll();
+
+      // Starting animation loop after first rendering
+      animLoop();
     });
   }
 })(document);
