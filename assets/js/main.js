@@ -10,8 +10,8 @@ window.requestAnimFrame = (function(){
     };
 })();
 
-(function(document, undefined){
-  var onScroll = (function(tag){
+(document.querySelector ? function(document, undefined){
+  var affix = (function(tag){
     var el, origOffsetY, origMaxOffsetY, prevOffset;
 
     el = document.querySelector(tag);
@@ -24,7 +24,7 @@ window.requestAnimFrame = (function(){
     origMaxOffsetY = el.parentNode.offsetTop + el.parentNode.clientHeight;
     prevOffset = origOffsetY;
 
-    return function onScroll(e) {
+    return function affix(e) {
       var globalOffsetHeight = window.pageYOffset + el.clientHeight + el.offsetTop;
       var isSticky;
 
@@ -56,6 +56,42 @@ window.requestAnimFrame = (function(){
     target.classList && target.classList.toggle('in');
   };
 
+  var imgLazyLoading = (function(treshold){
+    var els = document.querySelectorAll('img[data-src]');
+    var img = Array.prototype.slice.call(els);
+    treshold = treshold || 200;
+
+    function lazyLoadImage(el){
+      el.src = el.getAttribute('data-src');
+      el.removeAttribute('data-src');
+    }
+
+    return function imgLazyLoading(){
+      var initialLength = img.length;
+
+      if (!initialLength){
+        return false;
+      }
+
+      var top = window.pageYOffset || window.scrollY;
+      var height = window.screen.height;
+
+      img = img.filter(function(el){
+        var pos = el.getBoundingClientRect().top || 0;
+
+        if (pos >= 0 && pos <= top+height){
+          lazyLoadImage(el);
+        }
+        // keep it for later
+        else{
+          return el;
+        }
+      });
+
+      return initialLength !== img.length;
+    };
+  })();
+
   /**
    * @this Element
    */
@@ -64,7 +100,8 @@ window.requestAnimFrame = (function(){
     var target = Array.prototype.slice.call(el.querySelectorAll(el.dataset.target));
     var length = el.dataset.verticalResize;
 
-    while (source.length){
+    // if we have one element, we just don't care
+    while (source.length > 1){
       adjustHeightFor(target.splice(0, length), source.splice(0, length));
     }
 
@@ -80,8 +117,10 @@ window.requestAnimFrame = (function(){
       var maxHeight = 0;
 
       Array.prototype.forEach.call(elements, function(el){
-        if (el.clientHeight > maxHeight){
-          maxHeight = el.clientHeight + (el.style.paddingTop || 0) + (el.style.paddingBottom || 0);
+        var height = el.scrollHeight;
+
+        if (height > maxHeight){
+          maxHeight = height + (el.style.paddingTop || 0) + (el.style.paddingBottom || 0);
         }
       });
 
@@ -89,35 +128,39 @@ window.requestAnimFrame = (function(){
     }
   };
 
+  var autoAdjustHeight = (function(){
+    var els = document.querySelectorAll('[data-vertical-resize][data-target]');
+
+    return function autoAdjustHeight(){
+      Array.prototype.slice.call(els).map(heightAdjuster);
+    };
+  })();
+
   /**
    * Default animation loop to deal with regular rendering
    */
   var animLoop = function animLoop(){
     requestAnimFrame(animLoop);
 
-    onScroll();
+    affix();
+    if (imgLazyLoading()){
+      autoAdjustHeight();
+    }
   };
 
   /**
    * OnLoad stuff
    */
-  if (document.querySelector && document.addEventListener){
-    document.addEventListener('click', function collapseDelegator(e){
-      if (e.target && e.target.getAttribute('data-toggle') === 'collapse'){
-        toggleCollapse.call(e.target, e);
-      }
-    });
+  document.addEventListener('click', function collapseDelegator(e){
+    if (e.target && e.target.getAttribute('data-toggle') === 'collapse'){
+      toggleCollapse.call(e.target, e);
+    }
+  });
 
-    requestAnimFrame(function onLoadRendering(){
-      var els = document.querySelectorAll('[data-vertical-resize][data-target]');
+  requestAnimFrame(function onLoadRendering(){
+    autoAdjustHeight();
 
-      Array.prototype.slice.call(els).map(heightAdjuster);
-
-      // Initializing scroll stuff
-      onScroll();
-
-      // Starting animation loop after first rendering
-      animLoop();
-    });
-  }
-})(document);
+    // Starting animation loop after first rendering
+    animLoop();
+  });
+} : function(){})(document);
