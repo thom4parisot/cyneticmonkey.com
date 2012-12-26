@@ -38,11 +38,11 @@ window.requestAnimFrame = (function(){
       prevOffset = globalOffsetHeight;
 
       if (isSticky && !el.style.top && globalOffsetHeight > origMaxOffsetY){
-        el.dataset.offsetSticky = el.offsetTop;
+        el.setAttribute('data-offset-sticky', el.offsetTop);
         el.style.top = (origMaxOffsetY - el.clientHeight)+'px';
         el.style.position = 'absolute';
       }
-      else if(isSticky && el.style.top && window.pageYOffset < (el.offsetTop - el.dataset.offsetSticky)){
+      else if(isSticky && el.style.top && window.pageYOffset < (el.offsetTop - el.getAttribute('data-offset-sticky'))){
         el.style.top = el.style.position = null;
       }
     };
@@ -51,7 +51,7 @@ window.requestAnimFrame = (function(){
   var toggleCollapse = function(e){
     e.preventDefault();
 
-    var target = document.querySelector(this.dataset.target || '.nav-collapse');
+    var target = document.querySelector(this.getAttribute('data-target') || '.nav-collapse');
 
     target.classList && target.classList.toggle('in');
   };
@@ -96,9 +96,9 @@ window.requestAnimFrame = (function(){
    * @this Element
    */
   var heightAdjuster = function(el){
-    var source = Array.prototype.slice.call(el.querySelectorAll(el.dataset.source));
-    var target = Array.prototype.slice.call(el.querySelectorAll(el.dataset.target));
-    var length = el.dataset.verticalResize;
+    var source = Array.prototype.slice.call(el.querySelectorAll(el.getAttribute('data-source')));
+    var target = Array.prototype.slice.call(el.querySelectorAll(el.getAttribute('data-target')));
+    var length = el.getAttribute('data-vertical-resize');
 
     // if we have one element, we just don't care
     while (source.length > 1){
