@@ -23,7 +23,7 @@
                           <div class="excerpt">{{{excerpt}}}</div>
 
                           <ul class="metadata stacked inline stacked-horizontal">
-                          {{#tags}}<li>{{.}}</li>{{/tags}}
+                          {{#tags}}<li>{{{.}}}</li>{{/tags}}
                           </ul>
                       </article>
                   {{/contents}}
@@ -69,10 +69,12 @@
                       <p>{{{description}}}</p>
                   </div>
 
+                  {{#customer}}
                   <ul class="metadata stacked inline stacked-horizontal">
                     {{#customer_url}}<li><a href="{{customer_url}}">{{customer}}</a></li>{{/customer_url}}
                     {{^customer_url}}<li>{{customer}}</li>{{/customer_url}}
                   </ul>
+                  {{/customer}}
               </div>
           </li>
         {{/extra_contents}}
