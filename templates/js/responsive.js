@@ -161,7 +161,7 @@ window.requestAnimFrame = (function(){
 
     affix();
     if (imgLazyLoading()){
-      autoAdjustHeight();
+      setTimeout(autoAdjustHeight, 50);
     }
   };
 
