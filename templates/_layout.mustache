@@ -59,9 +59,9 @@
 <div class="container">
     <ul class="thumbnails" data-vertical-resize="3" data-source=".span4" data-target=".span4 .thumbnail">
         {{#extra_contents}}
-          <li class="span4">
+          <li class="span4"{{#language}} lang="{{language}}"{{/language}}>
               <div class="thumbnail">
-                  {{#thumb_path}}<img src="/images/placeholder.png" data-src="/images/projects/{{thumb_path}}" alt="">{{/thumb_path}}
+                  {{#thumb_path}}<img src="/images/placeholder.png" data-src="/images/{{thumb_path}}" alt="">{{/thumb_path}}
 
                   <div class="caption">
                       <h3>{{title}}</h3>
@@ -69,12 +69,12 @@
                       <p>{{{description}}}</p>
                   </div>
 
-                  {{#customer}}
+                  {{#more}}
                   <ul class="metadata stacked inline stacked-horizontal">
-                    {{#customer_url}}<li><a href="{{customer_url}}">{{customer}}</a></li>{{/customer_url}}
-                    {{^customer_url}}<li>{{customer}}</li>{{/customer_url}}
+                    {{#more_link}}<li><a href="{{more_link}}">{{more}}</a></li>{{/more_link}}
+                    {{^more_link}}<li>{{more}}</li>{{/more_link}}
                   </ul>
-                  {{/customer}}
+                  {{/more}}
               </div>
           </li>
         {{/extra_contents}}

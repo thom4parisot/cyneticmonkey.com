@@ -1,4 +1,5 @@
 {
+  "baseline": "Consultant Web JavaScript full-stack, HTML5, mobile et data",
   "navigation": [
     { "id": "home", "url": "/", "label": "Expertise Web" },
     { "id": "blog", "url": "https://case.oncle-tom.net/", "label": "Blog" },

@@ -1,4 +1,5 @@
 {
+  "page_title": "Expert Web Freelance",
   "title": "Expertise <span>Web</span>",
   "description": "Bénéficiez de mon expérience en JavaScript, HTML5, APIs, mobile et qualité.",
   "extra_title": "Projets et <span>réussites</span>",
@@ -35,7 +36,7 @@
       "title": "Automatisation des processus de travail",
       "customer": "AuCoffre",
       "customer_url": "http://www.aucoffre.com/",
-      "thumb_path": "mailchimp.png",
+      "thumb_path": "projects/mailchimp.png",
       "description": "Intégration sur-mesure de WordPress avec un processus de travail éditorial quotidien.<br>Génération automatique de médias, de newsletter <em>via</em> MailChimp et d'archives PDF de ces newsletters."
     },
     {
@@ -43,7 +44,7 @@
       "title": "Architecture vidéo live à la demande",
       "customer": "Libcast",
       "customer_url": "http://www.libcast.com",
-      "thumb_path": "amazon-webservices.jpg",
+      "thumb_path": "projects/amazon-webservices.jpg",
       "description": "Automatisation des déploiements et configuration d'instances de diffusion vidéo en Live à la demande.<br>Intégration des services CloudFormation, Route53, EC2 et EBS."
     },
     {
@@ -51,21 +52,21 @@
       "title": "Stratégie d'amélioration des performances Web",
       "customer": "Cdiscount",
       "customer_url": "http://www.cdiscount.com",
-      "thumb_path": "webperf-cdiscount.jpg",
+      "thumb_path": "projects/webperf-cdiscount.jpg",
       "description": "Préconisations techniques, prototypes fonctionnels, corrections de bugs, plugins jQuery, <i>roadmap</i> de développement, formation professionnelle."
     },
     {
       "id": "dijiwan-chrome",
       "title": "Extracteur de données temps réel",
       "customer": "Dijiwan",
-      "thumb_path": "dijiwan-chrome-extension.png",
+      "thumb_path": "projects/dijiwan-chrome-extension.png",
       "description": "Développement d'un outil d'extraction de données sur le Web.<br>Sécurisation <em>via</em> Google Apps, distribution du travail en temps réel."
     },
     {
       "id": "dijiwan-chrome",
       "title": "Application innovante de Data Intelligence",
       "customer": "Dijiwan",
-      "thumb_path": "nodejs-viziomap.jpg",
+      "thumb_path": "projects/nodejs-viziomap.jpg",
       "description": "Conception et développement agile d'une application d'étude de marché qualitative basées sur des sources d'information hétérogènes.<br>Automatisation de processus, intégration continue et tests (unitaires, fonctionnels)."
     },
     {
@@ -73,7 +74,7 @@
       "title": "Plateforme hyperlocale + Open APIs",
       "customer": "GIP GPV Rive Droite",
       "customer_url": "http://www.surlarivedroite.fr/",
-      "thumb_path": "expertise-gpv.jpg",
+      "thumb_path": "projects/expertise-gpv.jpg",
       "description": "Conception fonctionnelle d'une application Open Data, Open APIs et adaptative aux terminaux de navigation.<br>Son but ? Aider les acteurs et habitants à mieux vivre et diffuser <em>leur</em> territoire."
     },
     {
