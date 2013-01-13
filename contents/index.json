@@ -1,0 +1,101 @@
+{
+  "title": "Expertise <span>Web</span>",
+  "description": "Bénéficiez de mon expérience en JavaScript, HTML5, APIs, mobile et qualité.",
+  "extra_title": "Projets et <span>réussites</span>",
+  "extra_description": "Ces clients qui ont gagné dans notre collaboration.",
+  "contents": [
+    {
+      "id": "html5",
+      "title": "HTML5",
+      "tags": ["Web", "Mobile", "Extension Chrome", "Performance Web"],
+      "excerpt": "Ensemble de technologies multi-<em>device</em> ciblant le <strong>desktop</strong>, le <strong>mobile</strong> ou encore les <strong>télévisions</strong>.<br>HTML5 est particulièrement adapté pour la diffusion de contenus ou proposer des <strong>interfaces utilisateur dynamiques</strong>."
+    },
+    {
+      "id": "javascript",
+      "title": "JavaScript",
+      "tags": ["Web", "Node.js", "Data", "Mobile", "Extensions Chrome", "Raspberry Pi"],
+      "excerpt": "Langage moderne, <strong>performant</strong> et élégant.<br>JavaScript couvre un spectre large d'applications : <strong>applications Web</strong> modernes, applications <strong>mobile</strong>, bases de <strong>données</strong>, communication client/serveur, scripts Google Apps, interactions et animation d'interfaces."
+    },
+    {
+      "id": "performance",
+      "title": "Qualité & méthodes",
+      "tags": ["Agilité", "Outils", "Tests", "Performance"],
+      "excerpt": "Améliorer la qualité permet de <strong>réduire les coûts</strong> !<br>À la clé : réduction des temps de maintenance, prévention des bugs, automatisation des process, augmentation des taux de transformation et de vos revenus."
+    },
+    {
+      "id": "apis",
+      "title": "Data & APIs",
+      "tags": ["Big Data", "Open Data", "REST", "Temps réel", "Amazon"],
+      "excerpt": "Les données sont au cœur de nos métiers.<br>La <strong>création</strong> d'APIs facilite la diffusion des données en interne et vers le grand public. La <strong>consommation</strong> de données externes est devenue monnaie courrante. Et si vous leur donniez du sens grâce à la <strong>Data Intelligence</strong> ?"
+    }
+  ],
+  "extra_contents": [
+    {
+      "id": "aucoffre-emailing-pdf",
+      "title": "Automatisation des processus de travail",
+      "customer": "AuCoffre",
+      "customer_url": "http://www.aucoffre.com/",
+      "thumb_path": "mailchimp.png",
+      "description": "Intégration sur-mesure de WordPress avec un processus de travail éditorial quotidien.<br>Génération automatique de médias, de newsletter <em>via</em> MailChimp et d'archives PDF de ces newsletters."
+    },
+    {
+      "id": "libcast-livestream",
+      "title": "Architecture vidéo live à la demande",
+      "customer": "Libcast",
+      "customer_url": "http://www.libcast.com",
+      "thumb_path": "amazon-webservices.jpg",
+      "description": "Automatisation des déploiements et configuration d'instances de diffusion vidéo en Live à la demande.<br>Intégration des services CloudFormation, Route53, EC2 et EBS."
+    },
+    {
+      "id": "cdiscount-webperf",
+      "title": "Stratégie d'amélioration des performances Web",
+      "customer": "Cdiscount",
+      "customer_url": "http://www.cdiscount.com",
+      "thumb_path": "webperf-cdiscount.jpg",
+      "description": "Préconisations techniques, prototypes fonctionnels, corrections de bugs, plugins jQuery, <i>roadmap</i> de développement, formation professionnelle."
+    },
+    {
+      "id": "dijiwan-chrome",
+      "title": "Extracteur de données temps réel",
+      "customer": "Dijiwan",
+      "thumb_path": "dijiwan-chrome-extension.png",
+      "description": "Développement d'un outil d'extraction de données sur le Web.<br>Sécurisation <em>via</em> Google Apps, distribution du travail en temps réel."
+    },
+    {
+      "id": "dijiwan-chrome",
+      "title": "Application innovante de Data Intelligence",
+      "customer": "Dijiwan",
+      "thumb_path": "nodejs-viziomap.jpg",
+      "description": "Conception et développement agile d'une application d'étude de marché qualitative basées sur des sources d'information hétérogènes.<br>Automatisation de processus, intégration continue et tests (unitaires, fonctionnels)."
+    },
+    {
+      "id": "hypermedia-api",
+      "title": "Plateforme hyperlocale + Open APIs",
+      "customer": "GIP GPV Rive Droite",
+      "customer_url": "http://www.surlarivedroite.fr/",
+      "thumb_path": "expertise-gpv.jpg",
+      "description": "Conception fonctionnelle d'une application Open Data, Open APIs et adaptative aux terminaux de navigation.<br>Son but ? Aider les acteurs et habitants à mieux vivre et diffuser <em>leur</em> territoire."
+    },
+    {
+      "id": "realtime-rest-api",
+      "title": "API REST temps réel",
+      "customer": "Prévimétéo",
+      "customer_url": "http://www.previmeteo.com/",
+      "description": "Conception et développement d'une API REST partageant de milliards de données météo stockées dans MongoDB. Lecture, écriture et sorties multi-formats (XML, JSON, CSV)."
+    },
+    {
+      "id": "energy-dashboard",
+      "title": "Tableau de bord automatisé",
+      "customer": "Leclerc Energy",
+      "customer_url": "http://www.siplec.com/",
+      "description": "Collecte et rapports automatisés de tableaux de bord destinés à piloter la stratégie de prix au niveau national et local."
+    },
+    {
+      "id": "web-catalog",
+      "title": "Gestionnaire de catalogue interconnecté",
+      "customer": "Groupe Bricodeal",
+      "customer_url": "http://www.bricodeal.com/",
+      "description": "Outils informatiques, gestion électronique de catalogues et sites e-commerce. Intégration ERP et exports marketing et imprimerie."
+    }
+  ]
+}
