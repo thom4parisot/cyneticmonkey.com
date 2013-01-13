@@ -59,7 +59,7 @@
 <div class="container">
     <ul class="thumbnails" data-vertical-resize="3" data-source=".span4" data-target=".span4 .thumbnail">
         {{#extra_contents}}
-          <li class="span4"{{#language}} lang="{{language}}"{{/language}}>
+          <li {{#id}}id="{{id}}"{{/id}} class="span4"{{#language}} lang="{{language}}"{{/language}}>
               <div class="thumbnail">
                   {{#thumb_path}}<img src="/images/placeholder.png" data-src="/images/{{thumb_path}}" alt="">{{/thumb_path}}
 

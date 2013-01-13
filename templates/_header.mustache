@@ -11,16 +11,17 @@
     <meta name="description" content="CyneticMonkey développe vos applications Web grâce à JavaScript et HTML5. 10 ans d'expérience pour concevoir des applications sur mesure, de qualité et répondant aux attentes de vos utilisateurs.">
     <meta name="keywords" content="expert,technique,fonctionnel,wordpress,symfony,html,html4,html5,css,css2,css3,javascript,js,jquery,nodejs,mongodb,php,php4,php5,php6,performances,web,bordeaux,cub,aquitaine,gironde,amoa,internet">
 </head>
-<body>
+<body data-navigation-id="{{id}}">
 <dl id="skiplinks">
     <dt>Navigation rapide</dt>
     <dd><ul>
-        <li><a href="#html5">HTML5</a></li>
-        <li><a href="#javascript">JavaScript</a></li>
-        <li><a href="#performance">Qualité</a></li>
-        <li><a href="#apis">APIs</a></li>
-        <li><a href="#projects">Références</a></li>
-        <li><a href="#contact">Contact</a></li>
+      {{#contents}}
+      {{#id}}<li><a href="#{{id}}">{{title}}</a></li>{{/id}}
+      {{/contents}}
+      {{#extra_contents}}
+      {{#id}}<li><a href="#{{id}}">{{title}}</a></li>{{/id}}
+      {{/extra_contents}}
+      <li><a href="#contact">Contact</a></li>
     </ul></dd>
 </dl>
 
@@ -37,7 +38,7 @@
             <div class="nav-collapse collapse">
                 <ul class="nav">
                 {{#navigation}}
-                  <li><a href="{{url}}">{{label}}</a></li>
+                  <li data-page-id="{{id}}"><a href="{{url}}">{{label}}</a></li>
                 {{/navigation}}
                 </ul>
             </div>
