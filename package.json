@@ -13,7 +13,8 @@
   "devDependencies": {},
   "description": "ERROR: No README.md file found!",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "punch start"
   },
   "license": "BSD"
 }
