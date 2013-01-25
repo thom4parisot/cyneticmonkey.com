@@ -1,0 +1,32 @@
+{
+  "template_dir": "templates",
+  "content_dir":  "contents",
+  "output_dir":   "output",
+
+  "server": {
+    "port": 9009
+  },
+
+  "bundles": {
+    "/css/fonts.css": [
+      "/css/fonts.less"
+    ],
+    "/css/main.css":  [
+      "/css/screen.less"
+    ],
+    "/js/main.js":    [
+      "/js/responsive.js"
+    ]
+  },
+
+  "asset_bundling": {
+    "fingerprint": true
+  },
+
+  "generator": {
+    "blank":      true,
+    "skip_paths": [
+      "css/components"
+    ]
+  }
+}

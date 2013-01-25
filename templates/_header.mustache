@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    {{#stylesheet_bundle}}/css/fonts.css{{/stylesheet_bundle}}
+    {{#stylesheet_bundle}}/css/main.css{{/stylesheet_bundle}}
+    <title>{{page_title}} &mdash; {{baseline}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" href="assets/images/favicon-hires.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="description" content="CyneticMonkey développe vos applications Web grâce à JavaScript et HTML5. 10 ans d'expérience pour concevoir des applications sur mesure, de qualité et répondant aux attentes de vos utilisateurs.">
+    <meta name="keywords" content="expert,technique,fonctionnel,wordpress,symfony,html,html4,html5,css,css2,css3,javascript,js,jquery,nodejs,mongodb,php,php4,php5,php6,performances,web,bordeaux,cub,aquitaine,gironde,amoa,internet">
+</head>
+<body data-navigation-id="{{id}}">
+<dl id="skiplinks">
+    <dt>Navigation rapide</dt>
+    <dd><ul>
+      {{#contents}}
+      {{#id}}<li><a href="#{{id}}">{{title}}</a></li>{{/id}}
+      {{/contents}}
+      {{#extra_contents}}
+      {{#id}}<li><a href="#{{id}}">{{title}}</a></li>{{/id}}
+      {{/extra_contents}}
+      <li><a href="#contact">Contact</a></li>
+    </ul></dd>
+</dl>
+
+<div class="container">
+    <div class="navbar" id="services">
+        <div class="navbar-inner">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+
+            <a class="brand" href="https://case.oncle-tom.net/slash-me">@ Thomas Parisot</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                {{#navigation}}
+                  <li data-page-id="{{id}}"><a href="{{{url}}}">{{label}}</a></li>
+                {{/navigation}}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

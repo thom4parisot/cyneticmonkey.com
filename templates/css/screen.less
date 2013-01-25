@@ -1,16 +1,16 @@
 // CSS Reset
-@import "reset.less";
+@import "../../vendor/bootstrap/less/reset.less";
 
 // Core variables and mixins
-@import "variables.less"; // Modify this for custom colors, font-sizes, etc
-@import "mixins.less";
+@import "components/variables.less"; // Modify this for custom colors, font-sizes, etc
+@import "../../vendor/bootstrap/less/mixins.less";
 
 // Grid system and page structure
-@import "scaffolding.less";
+@import "../../vendor/bootstrap/less/scaffolding.less";
 #grid > .core(@gridColumnWidth, @gridGutterWidth);
 .container { .container-fixed(); }
 // Base CSS
-@import "type.less";
+@import "../../vendor/bootstrap/less/type.less";
 //@import "code.less";
 //@import "forms.less";
 //@import "tables.less";
@@ -27,9 +27,9 @@
 //@import "alerts.less"; // Note: alerts share common CSS with buttons and thus have styles in buttons.less
 
 // Components: Nav
-@import "navs.less";
-@import "navbar.less";
-@import "responsive-navbar.less";
+@import "../../vendor/bootstrap/less/navs.less";
+@import "../../vendor/bootstrap/less/navbar.less";
+@import "../../vendor/bootstrap/less/responsive-navbar.less";
 //@import "breadcrumbs.less";
 //@import "pagination.less";
 //@import "pager.less";
@@ -40,22 +40,22 @@
 //@import "popovers.less";
 
 // Components: Misc
-@import "thumbnails.less";
-@import "labels-badges.less";
+@import "../../vendor/bootstrap/less/thumbnails.less";
+@import "../../vendor/bootstrap/less/labels-badges.less";
 //@import "progress-bars.less";
 //@import "accordion.less";
-@import "carousel.less";
+@import "../../vendor/bootstrap/less/carousel.less";
 //@import "hero-unit.less";
 
 // Components: Misc
-@import "responsive-767px-max.less";
-@import "responsive-768px-979px.less";
-@import "responsive-utilities.less";
+@import "../../vendor/bootstrap/less/responsive-767px-max.less";
+@import "../../vendor/bootstrap/less/responsive-768px-979px.less";
+@import "../../vendor/bootstrap/less/responsive-utilities.less";
 //@import "responsive-1200px-min.less";
-@import "component-animations.less";
+@import "../../vendor/bootstrap/less/component-animations.less";
 
 // Utility classes
-@import "utilities.less"; // Has to be last to override when necessary
+@import "../../vendor/bootstrap/less/utilities.less"; // Has to be last to override when necessary
 
 /*
  * Basic overloading
@@ -120,11 +120,11 @@ a:focus,
   font-weight: bold;
 }
 
-@import "services.less";
-@import 'header.less';
-@import 'content.less';
-@import 'stacked.less';
-@import 'aside.less';
+@import "components/services.less";
+@import 'components/header.less';
+@import 'components/content.less';
+@import 'components/stacked.less';
+@import 'components/aside.less';
 
 /*
  * Container inverted

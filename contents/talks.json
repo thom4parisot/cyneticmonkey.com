@@ -1,0 +1,61 @@
+{
+  "id": "talks",
+  "page_title": "Conférences et publications Web",
+  "title": "Conférences <span>Web</span>",
+  "description": "Actions entreprises pour améliorer notre quotidien de travailleur du Web.",
+  "extra_title": "Contenus et <span>publications</span>",
+  "extra_description": "Morceaux choisis parmi mes interventions, articles et publications.",
+  "contents": [
+    {
+      "id": "sudweb",
+      "title": "Sud Web",
+      "title_link": "http://sudweb.fr/",
+      "tags": ["<strong>2 jours</strong> tous les ans", "<a href='http://sudweb.fr/'>sudweb.fr</a>"],
+      "excerpt": "Conférences focalisées sur les valeurs humaines et le partage d'expérience.<br><br>Une journée pour écouter et échanger avec des orateurs de qualité. Une autre journée pour élaborer, expérimenter et jouer ensemble avec les technologies du Web."
+    },
+    {
+      "id": "bordeauxjs",
+      "title": "BordeauxJS",
+      "title_link": "http://meetup.com/bordeauxjs",
+      "tags": ["<strong>3 heures</strong> tous les mois", "<a href='http://meetup.com/bordeauxjs'>bordeaux.js</a>"],
+      "excerpt": "<em>Afterwork</em> à l'organisation évolutive ayant JavaScript comme fil conducteur.<br><br>Des soirées pour apprendre, partager et expérimenter ensemble JavaScript que ce soit côté client, côté serveur ou en tant que base de données."
+    },
+    {
+      "id": "other-events",
+      "title": "Autres évènements",
+      "tags": ["<a href='http://lanyrd.com/profile/oncletom/future/'>Mon planning de conférences</a>"],
+      "excerpt": "Je suis curieux et passionné. J'essaie de participer et d'assister à plusieurs types d'évènements : <a href='http://paris-web.fr'>Paris Web</a>, <a href='http://dotjs.eu'>DotJS</a>, <a href='http://takeoffconf.com'>TakeOff</a>, Tedx, BarCamp, FailConf, Startup Weekend, Hackatons etc.<br><br>On s'y croisera peut-être ;-)"
+    }
+  ],
+  "extra_contents": [
+    {
+      "language": "en",
+      "title": "Business Logic in the Cloud with Google Apps Script",
+      "more": "TakeOff 2013",
+      "more_link": "http://takeoffconf.com/",
+      "thumb_path": "talks/takeoff-2013.jpg",
+      "description": "Google Apps Scripts is a hidden replacing gem without having to buy a SAP licence.</p><p>JavaScript is the cornerstone language to build scripts using your company’s Google Apps services and datas: retrieve from third party providers, host in Spreadsheets, publish to Calendar, notify with emails and more."
+    },
+    {
+      "title": "README : un fichier nommé plaisir",
+      "more": "Paris Web 2012",
+      "more_link": "http://www.paris-web.fr/2012/conferences/readme-un-fichier-nomme-plaisir.php",
+      "thumb_path": "talks/parisweb-2012.jpg",
+      "description": "Si vous aviez su que la rédaction du README de votre projet vous aurait permis non seulement de préserver votre apéro sacré, mais en plus de livrer le cœur léger, vous l'auriez sûrement écrit plus tôt."
+    },
+    {
+      "title": "Industrialisation de l'intégration Web : la révolution de l'artisan devenu ouvrier",
+      "more": "Paris Web 2011",
+      "more_link": "http://www.paris-web.fr/2011/conferences/industrialisation-mecanisation-des-esprits-ou-automatisation-des-procedes.php",
+      "thumb_path": "talks/parisweb-2011.jpg",
+      "description": "L'industrialisation, c'est un mot qui inquiète, surtout lorsque cela concerne un des pans du développement Web proche du modèle de l'artisanat. Est-ce le retour du travail à la chaîne ? Est-ce une spécialisation ou une déresponsabilisation ? Ou pire, est-ce un moyen d'apporter une réponse unique à des besoins multiples ?"
+    },
+    {
+      "title": "Industrialiser l'artisanat de l'intégration Web",
+      "more": "Paris Web 2010",
+      "more_link": "http://www.paris-web.fr/2010/programme/industrialiser-lartisanat-de-lintegration-html.php",
+      "thumb_path": "talks/parisweb-2010.jpg",
+      "description": "L'intégration HTML, et la qualité du livrable final, dépend essentiellement de l'intégrateur et de son expérience. Qui n'a jamais réécrit une feuille de style parce qu'on n'aimait pas l'organisation de son prédécesseur ? Qui n'a jamais ajouté du code plutôt que modifier l'existant, afin d'éviter l'effet Mikado ?"
+    }
+  ]
+}

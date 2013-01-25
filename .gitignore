@@ -1,4 +1,4 @@
 .tmp*
 .idea
-*.pyc
 node_modules
+output/*

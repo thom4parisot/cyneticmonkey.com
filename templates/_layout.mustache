@@ -1,0 +1,84 @@
+{{> header }}
+
+<header class="header">
+    <div class="container">
+        <h1>{{{title}}}</h1>
+
+        <blockquote class="description">{{description}}</blockquote>
+    </div>
+</header>
+
+<div class="container">
+    <div class="row">
+        <!-- Main Content -->
+        <div class="span10" role="main">
+            <div class="row">
+                <div class="span10">
+                  {{#contents}}
+                      <article id="{{id}}">
+                          <header>
+                              <h2>{{title}}</h2>
+                          </header>
+
+                          <div class="excerpt">{{{excerpt}}}</div>
+
+                          <ul class="metadata stacked inline stacked-horizontal">
+                          {{#tags}}<li>{{{.}}}</li>{{/tags}}
+                          </ul>
+                      </article>
+                  {{/contents}}
+                </div>
+            </div>
+        </div>
+
+        <!-- Aside -->
+        <aside class="span2 hidden-phone">
+            <p class="about">
+                <a href="https://case.oncle-tom.net/slash-me" rel="me" class="about">
+                    <img src="/images/placeholder.png" data-src="//www.gravatar.com/avatar/333c06724ad975ef667b80c1c17271a9?s=140&amp;d=&amp;r=G" height="140" width="140" class="avatar avatar-140" alt="À propos de Thomas Parisot">
+                </a>
+            </p>
+
+            <nav class="menu-navigation-container"><ul id="menu-navigation" class="menu"><li class="menu-item"><a title="Un flux RSS pour vous tenir informé des actualités de ce blog." href="https://case.oncle-tom.net/feed/">RSS</a></li>
+                <li class="menu-item"><a title="Consulter mes discussions publiques." href="https://twitter.com/oncletom">Twitter</a></li>
+                <li class="menu-item"><a title="Parcourir mes librairies et projets Open Source." href="https://github.com/oncletom">Github</a></li>
+                <li class="menu-item"><a title="Parcourir mes photographies en ligne" href="http://flickr.com/photos/the-jedi/">Photos</a></li>
+            </ul></nav>
+        </aside>
+    </div>
+</div>
+
+<header class="header" id="projects">
+    <div class="container">
+        <h1>{{{extra_title}}}</h1>
+
+        <blockquote class="description">{{description}}</blockquote>
+    </div>
+</header>
+
+<div class="container">
+    <ul class="thumbnails" data-vertical-resize="3" data-source=".span4" data-target=".span4 .thumbnail">
+        {{#extra_contents}}
+          <li {{#id}}id="{{id}}"{{/id}} class="span4"{{#language}} lang="{{language}}"{{/language}}>
+              <div class="thumbnail">
+                  {{#thumb_path}}<img src="/images/placeholder.png" data-src="/images/{{thumb_path}}" alt="">{{/thumb_path}}
+
+                  <div class="caption">
+                      <h3>{{title}}</h3>
+
+                      <p>{{{description}}}</p>
+                  </div>
+
+                  {{#more}}
+                  <ul class="metadata stacked inline stacked-horizontal">
+                    {{#more_link}}<li><a href="{{more_link}}">{{more}}</a></li>{{/more_link}}
+                    {{^more_link}}<li>{{more}}</li>{{/more_link}}
+                  </ul>
+                  {{/more}}
+              </div>
+          </li>
+        {{/extra_contents}}
+    </ul>
+</div>
+
+{{> footer }}
