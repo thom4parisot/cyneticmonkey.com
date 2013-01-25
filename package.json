@@ -2,6 +2,7 @@
   "author": "Thomas Parisot <ping@cyneticmonkey.com> (http://case.oncle-tom.net)",
   "name": "cyneticmonkey.com",
   "version": "2.0.0",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "git@github.com:oncletom/cyneticmonkey.com.git"
@@ -14,7 +15,8 @@
   "description": "ERROR: No README.md file found!",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "punch start"
+    "start": "punch start",
+    "deploy": "cp templates/.htaccess output/; rsync --progress --delete -az -e ssh output/ oncletom:~/../www_cyneticmonkey/"
   },
   "license": "BSD"
 }
