@@ -42,14 +42,14 @@ For example:
 ```apache
 <VirtualHost *:80>
   ServerName local.mywebsite.com
-        DocumentRoot /path/to/mywebsite.com/output
+  DocumentRoot /path/to/mywebsite.com/output
 
-        <Directory /path/to/mywebsite.com/output>
-                Options Indexes
-                AllowOverride All
-                Order allow,deny
-                allow from all
-        </Directory>
+  <Directory /path/to/mywebsite.com/output>
+    Options Indexes
+    AllowOverride All
+    Order allow,deny
+    allow from all
+  </Directory>
 </VirtualHost>
 ```
 
