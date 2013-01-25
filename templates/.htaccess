@@ -262,3 +262,9 @@ RewriteRule	^feeds/posts$		- [R=204,L]
 RewriteRule ^events$			https://www.google.com/calendar/embed?src=cyneticmonkey.com_57i9ip5bcq9jq8crnqa6ruupko@group.calendar.google.com [R=302,L]
 RewriteRule ^events/feed$	https://www.google.com/calendar/feeds/cyneticmonkey.com_57i9ip5bcq9jq8crnqa6ruupko@group.calendar.google.com/public/basic?orderby=starttime&sortorder=a	[R=302,L]
 </IfModule>
+
+# Redirecting pretty URL to HTML files
+<IfModule mod_rewrite.c>
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^(.+)$  $1.html [L]
+</IfModule>

@@ -93,6 +93,23 @@ window.requestAnimFrame = (function(){
   })();
 
   /**
+   * Auto-selects the navigation page
+   * It combines contents/[content].json#id key and contents/shared.json#navigation key
+   *
+   * @todo move than in a Mustache or handlebars method
+   */
+  function autoSelectNavigationPage(){
+    var page_id, pageContainer = document.querySelector('[data-navigation-id]');
+
+    page_id = pageContainer && pageContainer.getAttribute('data-navigation-id');
+    if (!page_id){
+      return false;
+    }
+
+    document.querySelector('[data-page-id="'+page_id+'"]').classList.add('active');
+  }
+
+  /**
    * @this Element
    */
   var heightAdjuster = function(el){
@@ -144,13 +161,14 @@ window.requestAnimFrame = (function(){
 
     affix();
     if (imgLazyLoading()){
-      autoAdjustHeight();
+      setTimeout(autoAdjustHeight, 50);
     }
   };
 
   /**
    * OnLoad stuff
    */
+  autoSelectNavigationPage();
   document.addEventListener('click', function collapseDelegator(e){
     if (e.target && e.target.getAttribute('data-toggle') === 'collapse'){
       toggleCollapse.call(e.target, e);

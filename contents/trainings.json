@@ -1,0 +1,36 @@
+{
+  "id": "trainings",
+  "page_title": "Formations Web en HTML5, JavaScript et Performance Web",
+  "title": "Formations <span>Web</span>",
+  "description": "Rendez vos équipes plus efficaces et réduisez les problèmes grâce à mon expérience.",
+  "extra_title": "Raisons et <span>avantages</span>",
+  "extra_description": "Pourquoi bénéficier de mes formations ?",
+  "contents": [
+    {
+      "id": "html5",
+      "title": "Formation HTML5",
+      "tags": ["<strong>1500€</strong> pour 3 jours", "<a href='http://formations.humancoders.com/formations/html5'>Programme complet</a>"],
+      "excerpt": "Ensemble de technologies multi-<em>device</em> ciblant le <strong>desktop</strong>, le <strong>mobile</strong> ou encore les <strong>télévisions</strong>.<br>HTML5 est particulièrement adapté pour la diffusion de contenus ou proposer des <strong>interfaces utilisateur dynamiques</strong>."
+    },
+    {
+      "id": "chrome-extensions",
+      "title": "Formation Extensions Chrome",
+      "tags": ["<strong>1000€</strong> pour 2 jours", "<a href='http://formations.humancoders.com/formations/extensions-chrome'>Programme complet</a>"],
+      "excerpt": "Langage moderne, <strong>performant</strong> et élégant.<br>JavaScript couvre un spectre large d'applications : <strong>applications Web</strong> modernes, applications <strong>mobile</strong>, bases de <strong>données</strong>, communication client/serveur, scripts Google Apps, interactions et animation d'interfaces."
+    }
+  ],
+  "extra_contents": [
+    {
+      "title": "Un véritable praticien",
+      "description": "Les contenus et enseignements sont issus directement d'une pratique et d'une veille quotidienne."
+    },
+    {
+      "title": "Utiliser les bons outils",
+      "description": "Je partage avec vous outils et méthodes pour bien travailler. Le meilleur moyen de mettre à profit vos nouvelles connaissances en retournant dans votre entreprise."
+    },
+    {
+      "title": "Nous discutons ensemble",
+      "description": "On prend le temps de travailler sur vos problématiques. Je vous écoute et propose des solutions adaptées à votre expérience et votre contexte professionnel."
+    }
+  ]
+}
