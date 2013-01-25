@@ -20,7 +20,7 @@ npm install -g punch
 The only thing to do to test locally is to run the following command:
 
 ```bash
-punch start
+punch server
 ```
 
 It will run the dev version on [http://localhost:9009](http://localhost:9009).
@@ -31,7 +31,7 @@ Once satisfied with the result, there is a two step process before seeing the co
 
 ```bash
 punch generate
-punch deploy
+npm run-script deploy
 ```
 
 If you want to test the *deployed* code after the `generate` process, simply
