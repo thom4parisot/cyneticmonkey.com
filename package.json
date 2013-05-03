@@ -12,14 +12,16 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "punch": "~0.5.23"
+    "punch": "~0.5.23",
+    "bower": "~0.9.2"
   },
   "description": "ERROR: No README.md file found!",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "punch g",
     "start": "punch s",
-    "deploy": "cp templates/.htaccess output/; rsync --progress --delete -az -e ssh output/ oncletom:~/../www_cyneticmonkey/"
+    "deploy": "cp templates/.htaccess output/; rsync --progress --delete -az -e ssh output/ oncletom:~/../www_cyneticmonkey/",
+    "postinstall": "bower install"
   },
   "license": "BSD"
 }
