@@ -8,14 +8,17 @@
     "url": "git@github.com:oncletom/cyneticmonkey.com.git"
   },
   "engines": {
-    "node": "0.6 || 0.8"
+    "node": "0.6 || 0.8 || 0.10"
   },
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "punch": "~0.5.23"
+  },
   "description": "ERROR: No README.md file found!",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "punch start",
+    "build": "punch g",
+    "start": "punch s",
     "deploy": "cp templates/.htaccess output/; rsync --progress --delete -az -e ssh output/ oncletom:~/../www_cyneticmonkey/"
   },
   "license": "BSD"
