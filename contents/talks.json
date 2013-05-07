@@ -30,6 +30,14 @@
   "extra_contents": [
     {
       "language": "en",
+      "title": "The Promise of jQuery Deferred",
+      "more": "jQuery UK 2013",
+      "more_link": "http://slideshare.net/oncletom/the-promise-of-j-query-deferred",
+      "thumb_path": "talks/jquery-uk-2013.jpg",
+      "description": "The Promise JavaScript pattern is receiving quite a lot of attention recently as popular asynchronous pattern.</p><p>This talk presents the way to understand the concept, how to learn using them step by step and how to design your software based on a real world example."
+    },
+    {
+      "language": "en",
       "title": "Business Logic in the Cloud with Google Apps Script",
       "more": "TakeOff 2013",
       "more_link": "http://takeoffconf.com/",
