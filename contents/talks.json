@@ -40,7 +40,7 @@
       "language": "en",
       "title": "Business Logic in the Cloud with Google Apps Script",
       "more": "TakeOff 2013",
-      "more_link": "http://takeoffconf.com/",
+      "more_link": "http://slideshare.net/oncletom/business-logic-in-the-cloud-with-google-apps-scripts-16054925",
       "thumb_path": "talks/takeoff-2013.jpg",
       "description": "Google Apps Scripts is a hidden replacing gem without having to buy a SAP licence.</p><p>JavaScript is the cornerstone language to build scripts using your company’s Google Apps services and datas: retrieve from third party providers, host in Spreadsheets, publish to Calendar, notify with emails and more."
     },
