@@ -9,10 +9,10 @@ and *mustache*.
 
 ## Install
 
-The only prerequisite after cloning this repo is to install `punch` website generator.
+The only prerequisite after cloning this repo and to install the dependencies:
 
 ```bash
-npm install -g punch
+npm install
 ```
 
 ## Run
@@ -20,7 +20,7 @@ npm install -g punch
 The only thing to do to test locally is to run the following command:
 
 ```bash
-punch server
+npm start
 ```
 
 It will run the dev version on [http://localhost:9009](http://localhost:9009).
@@ -30,7 +30,7 @@ It will run the dev version on [http://localhost:9009](http://localhost:9009).
 Once satisfied with the result, there is a two step process before seeing the code live.
 
 ```bash
-punch generate
+npm run-script build
 npm run-script deploy
 ```
 
