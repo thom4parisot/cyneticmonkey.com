@@ -46,27 +46,26 @@ aside{
       text-decoration: none;
     }
 
-    a::after{
-      font-family: JustVectorRegular;
-      font-size: 2em;
+    a:after{
+      font-family: fontello;
+      font-size: 1.5em;
       position: absolute;
-      right: 5px;
+      right: 7px;
     }
 
-    a[href$='/feed/']::after{
-      content: "*";
-      font-size: 1.8em;
+    a[href$='/feed/']:after{
+      content: "\e802";
     }
-    a[href*='twitter.com']::after{
-      content: "_";
-    }
-
-    a[href*='flickr.com']::after{
-      content: "b";
+    a[href*='twitter.com']:after{
+      content: "\e800";
     }
 
-    a[href*='github.com']::after{
-      content: "j";
+    a[href*='flickr.com']:after{
+      content: "\e803";
+    }
+
+    a[href*='github.com']:after{
+      content: "\e801";
     }
   }
 }
@@ -89,7 +88,7 @@ aside{
     }
 
     .menu-item{
-      a::after{
+      a:after{
         display: none;
         font-family: @baseFontFamily;
       }
